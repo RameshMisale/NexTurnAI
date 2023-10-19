@@ -16,7 +16,7 @@ width, height = image.size
 desired_width = 500
 
 # Add a title and description
-st.title("Welcome to Your Interactive Company App!")
+st.title("Welcome to NexTurnAI Project!")
 st.write("Explore different cases and navigate to specific links.")
 
 
