@@ -1,6 +1,5 @@
 import streamlit as st
 from PIL import Image
-
 # Set page title and company logo
 st.set_page_config(
     page_title="Interactive Company App",
