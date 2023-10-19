@@ -13,7 +13,7 @@ st.set_page_config(
  
 
 # Open the image file
-image = Image.open("LOGO.png")
+image = Image.open("Linkedin Banner.png")
 
  
 
