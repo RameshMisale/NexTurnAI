@@ -7,7 +7,7 @@ st.set_page_config(
     layout="wide"
 )
 # Open the image file
-image = Image.open("Linkedin Banner.png")
+image = Image.open("Logo.png")
 
 # Get the dimensions of the image
 width, height = image.size
