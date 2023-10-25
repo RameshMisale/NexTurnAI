@@ -16,18 +16,8 @@ st.markdown(
             background-color: black; /* Set the background color to black */
             color: white; /* Text color */
         }}
-        .images-box {{
+        .case-box {{
             background-color: #EED9C7; /* Almond background color */
-            padding: 10px;
-            border-radius: 10px;
-        }}
-        .videos-box {{
-            background-color: #963939; /* Antique Ruby background color */
-            padding: 10px;
-            border-radius: 10px;
-        }}
-        .audios-box {{
-            background-color: #8DB051; /* Artichoke Green background color */
             padding: 10px;
             border-radius: 10px;
         }}
@@ -43,7 +33,7 @@ image = Image.open("Logo.png")
 width, height = image.size
 
 # Calculate the desired width (in this example, 500 pixels)
-desired_width = 200
+desired_width = 500
 
 # Add a title and description
 st.image(image, width=desired_width, use_column_width=True)
@@ -55,7 +45,7 @@ col1, col2, col3 = st.columns(3)
 
 # Case: Images
 with col1:
-    st.markdown('<div class="images-box">Images</div>', unsafe_allow_html=True)
+    st.markdown('<div class="case-box">Images</div>', unsafe_allow_html=True)
     st.markdown("Image 1")
     st.markdown("[Link to Image 1](https://innodataengineers.wordpress.com)")
     st.markdown("Image 2")
@@ -65,7 +55,7 @@ with col1:
 
 # Case: Videos
 with col2:
-    st.markdown('<div class="videos-box">Videos</div>', unsafe_allow_html=True)
+    st.markdown('<div class="case-box">Videos</div>', unsafe_allow_html=True)
     st.markdown("Video 1")
     st.markdown("[Link to Video 1](https://www.example.com/video1)")
     st.markdown("Video 2")
@@ -75,7 +65,7 @@ with col2:
 
 # Case: Audios
 with col3:
-    st.markdown('<div class="audios-box">Audios</div>', unsafe_allow_html=True)
+    st.markdown('<div class="case-box">Audios</div>', unsafe_allow_html=True)
     st.markdown("Audio 1")
     st.markdown("[Link to Audio 1](https://www.example.com/audio1)")
     st.markdown("Audio 2")
