@@ -28,26 +28,32 @@ col1, col2, col3 = st.columns(3)
 # Case One: Images
 with col1:
     st.info("Images")
-    st.markdown("Case 1")
-    st.markdown("[Image 1](https://innodataengineers.wordpress.com)")
-    st.markdown("[Image 2](https://www.example.com/image2)")
-    st.markdown("[Image 3](https://www.example.com/image3)")
+    st.markdown("Image 1")
+    st.markdown("[Link to Image 1](https://innodataengineers.wordpress.com)")
+    st.markdown("Image 2")
+    st.markdown("[Link to Image 2](https://www.example.com/image2)")
+    st.markdown("Image 3")
+    st.markdown("[Link to Image 3](https://www.example.com/image3)")
 
 # Case Two: Videos
 with col2:
     st.info("Videos")
-    st.markdown("Case 2")
-    st.markdown("[Video 1](https://www.example.com/video1)")
-    st.markdown("[Video 2](https://www.example.com/video2)")
-    st.markdown("[Video 3](https://www.example.com/video3)")
+    st.markdown("Video 1")
+    st.markdown("[Link to Video 1](https://www.example.com/video1)")
+    st.markdown("Video 2")
+    st.markdown("[Link to Video 2](https://www.example.com/video2)")
+    st.markdown("Video 3")
+    st.markdown("[Link to Video 3](https://www.example.com/video3)")
 
 # Case Three: Audios
 with col3:
     st.info("Audios")
-    st.markdown("Case 3")
-    st.markdown("[Audio 1](https://www.example.com/audio1)")
-    st.markdown("[Audio 2](https://www.example.com/audio2)")
-    st.markdown("[Audio 3](https://www.example.com/audio3)")
+    st.markdown("Audio 1")
+    st.markdown("[Link to Audio 1](https://www.example.com/audio1)")
+    st.markdown("Audio 2")
+    st.markdown("[Link to Audio 2](https://www.example.com/audio2)")
+    st.markdown("Audio 3")
+    st.markdown("[Link to Audio 3](https://www.example.com/audio3)")
 
 # Footer
 st.markdown("---")
