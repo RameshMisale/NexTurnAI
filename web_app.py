@@ -4,7 +4,7 @@ from PIL import Image
 # Set page title and company logo
 st.set_page_config(
     page_title="NexTurn AI Project",
-    page_icon=":rocket:",
+    page_icon=":rocket:", 
     layout="wide"
 )
 
