@@ -13,20 +13,10 @@ st.markdown(
     f"""
     <style>
         .stApp {{
-            background-color: #000000; /* Black background color */
+            background-color: black; /* Black background color */
         }}
         .images-box {{
-            background-color: #EED9C7; /* Blue background color */
-            padding: 10px;
-            border-radius: 10px;
-        }}
-        .videos-box {{
-            background-color: #963939; /* Antique Ruby background color */
-            padding: 10px;
-            border-radius: 10px;
-        }}
-        .audios-box {{
-            background-color: #8DB051; /* Artichoke Green background color */
+            background-color: #F0FFFF; /* Azure background color */
             padding: 10px;
             border-radius: 10px;
         }}
@@ -64,7 +54,7 @@ with col1:
 
 # Case: Videos
 with col2:
-    st.markdown('<div class="videos-box">Videos</div>', unsafe_allow_html=True)
+    st.info("Videos")
     st.markdown("Video 1")
     st.markdown("[Link to Video 1](https://www.example.com/video1)")
     st.markdown("Video 2")
@@ -74,7 +64,7 @@ with col2:
 
 # Case: Audios
 with col3:
-    st.markdown('<div class="audios-box">Audios</div>', unsafe_allow_html=True)
+    st.info("Audios")
     st.markdown("Audio 1")
     st.markdown("[Link to Audio 1](https://www.example.com/audio1)")
     st.markdown("Audio 2")
