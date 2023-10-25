@@ -16,7 +16,7 @@ st.markdown(
             background-color: #000000; /* Black background color */
         }}
         .images-box {{
-            background-color: #EED9C7; /* Almond background color */
+            background-color: #EED9C7; /* Azure background color */
             padding: 10px;
             border-radius: 10px;
         }}
