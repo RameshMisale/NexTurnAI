@@ -8,7 +8,7 @@ st.set_page_config(
     layout="wide"
 )
 
-# Open the image file 
+# Open the image file
 image = Image.open("Logo.png")
 
 # Get the dimensions of the image
@@ -27,57 +27,24 @@ col1, col2, col3 = st.columns(3)
 
 # Case One: Images
 with col1:
-    st.header("Image 1")
-    st.image("image_example_1.jpg", width=300)
-    st.markdown("[Link to Image 1](https://innodataengineers.wordpress.com)")
+    st.header("Images")
+    st.markdown("[Image 1](https://innodataengineers.wordpress.com)")
+    st.markdown("[Image 2](https://www.example.com/image2)")
+    st.markdown("[Image 3](https://www.example.com/image3)")
 
-# Case Two: Images
+# Case Two: Videos
 with col2:
-    st.header("Image 2")
-    st.image("image_example_2.jpg", width=300)
-    st.markdown("[Link to Image 2](https://www.example.com/image2)")
+    st.header("Videos")
+    st.markdown("[Video 1](https://www.example.com/video1)")
+    st.markdown("[Video 2](https://www.example.com/video2)")
+    st.markdown("[Video 3](https://www.example.com/video3)")
 
-# Case Three: Images
+# Case Three: Audios
 with col3:
-    st.header("Image 3")
-    st.image("image_example_3.jpg", width=300)
-    st.markdown("[Link to Image 3](https://www.example.com/image3)")
-
-# Case Four: Videos
-with col1:
-    st.header("Video 1")
-    st.video("video_example_1.mp4")
-    st.markdown("[Link to Video 1](https://www.example.com/video1)")
-
-# Case Five: Videos
-with col2:
-    st.header("Video 2")
-    st.video("video_example_2.mp4")
-    st.markdown("[Link to Video 2](https://www.example.com/video2)")
-
-# Case Six: Videos
-with col3:
-    st.header("Video 3")
-    st.video("video_example_3.mp4")
-    st.markdown("[Link to Video 3](https://www.example.com/video3)")
-
-# Case Seven: Audios
-with col1:
-    st.header("Audio 1")
-    st.audio("audio_example_1.mp3")
-    st.markdown("[Link to Audio 1](https://www.example.com/audio1)")
-
-# Case Eight: Audios
-with col2:
-    st.header("Audio 2")
-    st.audio("audio_example_2.mp3")
-    st.markdown("[Link to Audio 2](https://www.example.com/audio2)")
-
-# Case Nine: Audios
-with col3:
-    st.header("Audio 3")
-    st.audio("audio_example_3.mp3")
-    st.markdown("[Link to Audio 3](https://www.example.com/audio3)")
+    st.header("Audios")
+    st.markdown("[Audio 1](https://www.example.com/audio1)")
+    st.markdown("[Audio 2](https://www.example.com/audio2)")
+    st.markdown("[Audio 3](https://www.example.com/audio3)")
 
 # Footer
 st.markdown("---")
