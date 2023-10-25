@@ -10,7 +10,7 @@ st.set_page_config(
 
 # Open the image file
 image = Image.open("Logo.png")
-
+ 
 # Get the dimensions of the image
 width, height = image.size
 
