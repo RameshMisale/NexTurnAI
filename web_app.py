@@ -13,7 +13,8 @@ st.markdown(
     f"""
     <style>
         .stApp {{
-            background-color: #f2f2f2; /* App background color */
+            background-color: black; /* Set the background color to black */
+            color: white; /* Text color */
         }}
         .images-box {{
             background-color: #EED9C7; /* Almond background color */
