@@ -85,4 +85,4 @@ with col3:
 
 # Footer
 st.markdown("---")
-st.write("Thank for visiting...!!")
+st.write("Thank you for visiting...!!")
