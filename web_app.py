@@ -8,9 +8,36 @@ st.set_page_config(
     layout="wide"
 )
 
+# Define the background color using CSS
+st.markdown(
+    f"""
+    <style>
+        .stApp {{
+            background-color: white; /* White background for the entire app */
+        }}
+        .images-box {{
+            background-color: #FFFF00; /* Yellow background for Images box */
+            padding: 10px;
+            border-radius: 5px;
+        }}
+        .videos-box {{
+            background-color: #FF0000; /* Red background for Videos box */
+            padding: 10px;
+            border-radius: 5px;
+        }}
+        .audios-box {{
+            background-color: #0000FF; /* Blue background for Audios box */
+            padding: 10px;
+            border-radius: 5px;
+        }}
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
+
 # Open the image file
 image = Image.open("Logo.png")
- 
+
 # Get the dimensions of the image
 width, height = image.size
 
@@ -27,33 +54,54 @@ col1, col2, col3 = st.columns(3)
 
 # Case: Images
 with col1:
-    st.info("Images")
-    st.markdown("Image 1")
-    st.markdown("[Link to Image 1](https://innodataengineers.wordpress.com)")
-    st.markdown("Image 2")
-    st.markdown("[Link to Image 2](https://www.example.com/image2)")
-    st.markdown("Image 3")
-    st.markdown("[Link to Image 3](https://www.example.com/image3)")
+    st.markdown(
+        """
+        <div class="images-box">
+        <h3>Images</h3>
+        <p>Image 1</p>
+        <p><a href="https://innodataengineers.wordpress.com">Link to Image 1</a></p>
+        <p>Image 2</p>
+        <p><a href="https://www.example.com/image2">Link to Image 2</a></p>
+        <p>Image 3</p>
+        <p><a href="https://www.example.com/image3">Link to Image 3</a></p>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
 
 # Case: Videos
 with col2:
-    st.info("Videos")
-    st.markdown("Video 1")
-    st.markdown("[Link to Video 1](https://www.example.com/video1)")
-    st.markdown("Video 2")
-    st.markdown("[Link to Video 2](https://www.example.com/video2)")
-    st.markdown("Video 3")
-    st.markdown("[Link to Video 3](https://www.example.com/video3)")
+    st.markdown(
+        """
+        <div class="videos-box">
+        <h3>Videos</h3>
+        <p>Video 1</p>
+        <p><a href="https://www.example.com/video1">Link to Video 1</a></p>
+        <p>Video 2</p>
+        <p><a href="https://www.example.com/video2">Link to Video 2</a></p>
+        <p>Video 3</p>
+        <p><a href="https://www.example.com/video3">Link to Video 3</a></p>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
 
 # Case: Audios
 with col3:
-    st.info("Audios")
-    st.markdown("Audio 1")
-    st.markdown("[Link to Audio 1](https://www.example.com/audio1)")
-    st.markdown("Audio 2")
-    st.markdown("[Link to Audio 2](https://www.example.com/audio2)")
-    st.markdown("Audio 3")
-    st.markdown("[Link to Audio 3](https://www.example.com/audio3)")
+    st.markdown(
+        """
+        <div class="audios-box">
+        <h3>Audios</h3>
+        <p>Audio 1</p>
+        <p><a href="https://www.example.com/audio1">Link to Audio 1</a></p>
+        <p>Audio 2</p>
+        <p><a href="https://www.example.com/audio2">Link to Audio 2</a></p>
+        <p>Audio 3</p>
+        <p><a href="https://www.example.com/audio3">Link to Audio 3</a></p>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
 
 # Footer
 st.markdown("---")
