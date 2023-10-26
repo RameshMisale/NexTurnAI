@@ -8,14 +8,15 @@ st.set_page_config(
     layout="wide"
 )
 
-# Define the background color using CSS
+# Define the background style using CSS
 st.markdown(
     f"""
     <style>
         .stApp {{
-            background-image: url('background.jpg'); /* Background image */
+            background: url('background.jpg'); /* Background image */
             background-size: cover;
-            background-repeat: no-repeat;
+            background-blur: 10px; /* Blur effect for background */
+            color: white; /* Text color */
             font-family: 'Arial', sans-serif; /* Custom font */
         }}
         .container {{
@@ -23,7 +24,7 @@ st.markdown(
             flex-direction: row;
         }}
         .box {{
-            background-color: #ffffff; /* White background color */
+            background-color: rgba(0, 0, 0, 0.5); /* Translucent background for boxes */
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
@@ -31,14 +32,14 @@ st.markdown(
         }}
         .box a {{
             text-decoration: none;
-            color: #333; /* Dark text color */
+            color: #fff; /* Link color */
             font-weight: bold;
         }}
         .box a:hover {{
-            color: #555; /* Hover effect color */
+            color: #ddd; /* Hover effect color */
         }}
         .box h3 {{
-            color: #555; /* Section title color */
+            color: #ddd; /* Section title color */
             margin-bottom: 10px;
             font-size: 24px;
         }}
