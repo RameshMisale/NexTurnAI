@@ -18,34 +18,45 @@ st.markdown(
             background-image: url('https://raw.githubusercontent.com/RameshMisale/NexTurnAI/main/background.jpg'); /* Background image */
             background-size: cover;
             background-attachment: fixed;
-            filter: brightness(70%); /* Decrease brightness to 70% */
+            filter: brightness(80%); /* Reduced brightness to 80% */
         }}
         .container {{
             display: flex;
             flex-direction: row;
         }}
-        .content {{
-            flex: 1; /* Allow content to take remaining space */
+        .images-box {{
+            background-color: #EED9C7; /* Almond background color */
+            padding: 10px;
+            border-radius: 10px;
+            margin-right: 10px;
+        }}
+        .videos-box {{
+            background-color: #963939; /* Antique Ruby background color */
+            padding: 10px;
+            border-radius: 10px;
+            margin-right: 10px;
+        }}
+        .audios-box {{
+            background-color: #8DB051; /* Artichoke Green background color */
+            padding: 10px;
+            border-radius: 10px;
         }}
     </style>
     """,
     unsafe_allow_html=True,
 )
 
-# Open the image file (logo)
-logo = Image.open("Logo.png")
+# Open the image file
+image = Image.open("Logo.png")
 
-# Get the dimensions of the logo image
-logo_width, logo_height = logo.size
+# Get the dimensions of the image
+width, height = image.size
 
-# Calculate the desired width and height for the logo (adjust as needed)
-desired_logo_width = 150
-desired_logo_height = int(logo_height * (desired_logo_width / logo_width))
-
-# Add the logo in the top left corner
-st.image(logo, width=desired_logo_width, height=desired_logo_height, use_container_width=False)
+# Calculate the desired width (in this example, 500 pixels)
+desired_width = 50
 
 # Add a title and description
+st.image(image, width=desired_width, use_column_width=True)
 st.title("Welcome to NexTurn AI Project!")
 st.write("Explore different cases and navigate to specific links.")
 
@@ -62,7 +73,7 @@ st.markdown("Image 3")
 st.markdown("[Link to Image 3](https://www.example.com/image3)")
 
 # Case: Videos
-st.markdown('<div class="images-box">Videos</div>', unsafe_allow_html=True)
+st.markdown('<div class="videos-box">Videos</div>', unsafe_allow_html=True)
 st.markdown("Video 1")
 st.markdown("[Link to Video 1](https://www.example.com/video1)")
 st.markdown("Video 2")
