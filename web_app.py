@@ -60,7 +60,7 @@ st.title("Welcome to NexTurn AI Project!")
 st.write("Explore different cases and navigate to specific links.")
  
 # Create a horizontal layout container using custom CSS
-st.markdown('<div class="container">')
+#st.markdown('<div class="container">')
  
 # Case: Images
 st.markdown('<div class="images-box">Images</div>', unsafe_allow_html=True)
@@ -90,7 +90,7 @@ st.markdown("Audio 3")
 st.markdown("[Link to Audio 3](https://www.example.com/audio3)")
  
 # Close the horizontal layout container
-st.markdown('</div>')
+#st.markdown('</div>')
  
 # Footer
 st.markdown("---")
