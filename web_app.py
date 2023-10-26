@@ -25,19 +25,19 @@ st.markdown(
             flex-direction: row;
         }}
         .images-box {{
-            background-color: blue; /* Black background color */
+            background-color: blue; /* blue background color */
             padding: 10px;
             border-radius: 10px;
             margin-right: 10px;
         }}
         .videos-box {{
-            background-color: Red; /* Black background color */
+            background-color: Red; /* Red background color */
             padding: 10px;
             border-radius: 10px;
             margin-right: 10px;
         }}
         .audios-box {{
-            background-color: black; /* Black background color */
+            background-color: purple; /* purple background color */
             padding: 10px;
             border-radius: 10px;
         }}
