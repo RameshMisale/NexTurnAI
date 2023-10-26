@@ -18,14 +18,14 @@ st.markdown(
             background-image: url('https://raw.githubusercontent.com/RameshMisale/NexTurnAI/main/background.jpg'); /* Background image */
             background-size: cover;
             background-attachment: fixed;
-            filter: brightness(70%); /* Decrease brightness to 70% */
+            filter: brightness(70%); /* Decrease brightness to 50% */
         }}
         .container {{
             display: flex;
             flex-direction: row;
         }}
         .logo {{
-            max-width: 150px; /* Adjust the max width for the logo */
+            max-width: 250px; /* Adjust the max width for the logo */
             margin: 10px; /* Add some margin to the logo */
         }}
         .content {{
