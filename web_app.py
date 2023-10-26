@@ -15,7 +15,7 @@ st.markdown(
         .stApp {{
             background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
             color: white; /* Text color */
-            background-image: url('https://github.com/RameshMisale/NexTurnAI/blob/main/background.jpg'); /* Background image */
+            background-image: url('https://raw.githubusercontent.com/RameshMisale/NexTurnAI/main/background.jpg'); /* Background image */
             background-size: cover;
             background-attachment: fixed;
         }}
