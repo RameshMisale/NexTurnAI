@@ -62,7 +62,7 @@ width, height = image.size
 desired_width = 150
 
 # Add the logo in the top left
-st.image(image, width=desired_width, use_column_width=False, output_format="PNG", output_width=150, output_height=150, use_container_width=False)
+st.image(image, width=desired_width)
 
 # Add a title and description
 st.title("Welcome to NexTurn AI Project!")
@@ -99,7 +99,7 @@ st.markdown("Audio 3")
 st.markdown("[Link to Audio 3](https://www.example.com/audio3)")
 
 # Close the horizontal layout container
-#st.markdown('</div>')
+st.markdown('</div>')
 
 # Footer
 st.markdown("---")
