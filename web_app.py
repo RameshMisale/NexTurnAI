@@ -8,7 +8,7 @@ st.set_page_config(
     layout="wide"
 )
 
-# Define the background color using CSS
+# Define the background color and text brightness using CSS
 st.markdown(
     f"""
     <style>
@@ -18,7 +18,7 @@ st.markdown(
             background-image: url('https://raw.githubusercontent.com/RameshMisale/NexTurnAI/main/background.jpg'); /* Background image */
             background-size: cover;
             background-attachment: fixed;
-            filter: brightness(150%); /* Reduced brightness to 150% */
+            filter: brightness(80%); /* Reduced background brightness to 80% */
         }}
         .container {{
             display: flex;
@@ -41,6 +41,9 @@ st.markdown(
             padding: 10px;
             border-radius: 10px;
         }}
+        .stMarkdown {{
+            filter: brightness(200%); /* Increased text brightness to 200% */
+        }}
     </style>
     """,
     unsafe_allow_html=True,
@@ -61,7 +64,7 @@ st.title("Welcome to NexTurn AI Project!")
 st.write("Explore different cases and navigate to specific links.")
 
 # Create a horizontal layout container using custom CSS
-st.markdown('<div class="container">')
+#st.markdown('<div class="container">')
 
 # Case: Images
 st.markdown('<div class="images-box">Images</div>', unsafe_allow_html=True)
@@ -91,7 +94,7 @@ st.markdown("Audio 3")
 st.markdown("[Link to Audio 3](https://www.example.com/audio3)")
 
 # Close the horizontal layout container
-st.markdown('</div>')
+#st.markdown('</div>')
 
 # Footer
 st.markdown("---")
