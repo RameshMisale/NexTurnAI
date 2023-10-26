@@ -24,11 +24,6 @@ st.markdown(
             display: flex;
             flex-direction: row;
         }}
-        .logo {{
-            max-width: 200px; /* Adjust the max width for the logo (increase size) */
-            margin: 10px; /* Add some margin to the logo */
-            filter: brightness(150%); /* Increase brightness to 150% */
-        }}
         .content {{
             flex: 1; /* Allow content to take remaining space */
         }}
@@ -38,16 +33,9 @@ st.markdown(
             border-radius: 10px;
             margin-right: 10px;
         }}
-        .videos-box {{
-            background-color: #963939; /* Antique Ruby background color */
-            padding: 10px;
-            border-radius: 10px;
-            margin-right: 10px;
-        }}
-        .audios-box {{
-            background-color: #8DB051; /* Artichoke Green background color */
-            padding: 10px;
-            border-radius: 10px;
+        .logo {{
+            max-width: 200px; /* Adjust the max width for the logo (increase size) */
+            filter: brightness(150%); /* Increase brightness to 150% */
         }}
     </style>
     """,
@@ -64,7 +52,7 @@ width, height = image.size
 desired_width = 200
 
 # Add the logo in the top left
-st.image(image, width=desired_width, use_column_width=False, output_format="PNG", output_width=150, output_height=150, use_container_width=False, key="logo")
+st.image(image, width=desired_width, use_column_width=False, output_format="PNG", key="logo")
 
 # Add a title and description
 st.title("Welcome to NexTurn AI Project!")
@@ -83,7 +71,7 @@ st.markdown("Image 3")
 st.markdown("[Link to Image 3](https://www.example.com/image3)")
 
 # Case: Videos
-st.markdown('<div class="videos-box">Videos</div>', unsafe_allow_html=True)
+st.markdown('<div class="images-box">Videos</div>', unsafe_allow_html=True)
 st.markdown("Video 1")
 st.markdown("[Link to Video 1](https://www.example.com/video1)")
 st.markdown("Video 2")
