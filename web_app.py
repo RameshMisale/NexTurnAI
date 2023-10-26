@@ -47,7 +47,7 @@ st.image(image, width=desired_width, use_column_width=True)
 st.title("Welcome to NexTurn AI Project!")
 st.write("Explore different cases and navigate to specific links.") 
 # Create a horizontal layout container using custom CSS
-st.markdown('<div class="container">')
+#st.markdown('<div class="container">')
 # Case: Images
 st.markdown('<div class="images-box">Images</div>', unsafe_allow_html=True)
 st.markdown("Image 1")
