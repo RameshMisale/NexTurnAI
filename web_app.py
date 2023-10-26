@@ -14,7 +14,7 @@ st.markdown(
     <style>
         .stApp {{
             background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
-            color: white; /* Text color */
+            color: black; /* Text color in black */
             background-image: url('https://raw.githubusercontent.com/RameshMisale/NexTurnAI/main/background.jpg'); /* Background image */
             background-size: cover;
             background-attachment: fixed;
@@ -58,7 +58,7 @@ desired_width = 50
 st.image(image, width=desired_width, use_column_width=True)
 st.title("Welcome to NexTurn AI Project!")
 
-# Set the text color to white for better visibility
+# Set the text color to black
 st.write("Explore different cases and navigate to specific links.", unsafe_allow_html=True)
 
 # Create a horizontal layout container using custom CSS
