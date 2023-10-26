@@ -73,7 +73,7 @@ st.markdown("[Link to Audio 2](https://www.example.com/audio2)")
 st.markdown("Audio 3")
 st.markdown("[Link to Audio 3](https://www.example.com/audio3)") 
 # Close the horizontal layout container
-st.markdown('</div>') 
+#st.markdown('</div>') 
 # Footer
 st.markdown("---")
 st.write("Thank you for visiting...!!")
