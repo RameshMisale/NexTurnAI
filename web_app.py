@@ -3,51 +3,41 @@ from PIL import Image
 
 # Set page title and company logo
 st.set_page_config(
-    page_title="Beautiful Streamlit Website",
-    page_icon=":art:",
+    page_title="NexTurn AI Project",
+    page_icon=":rocket:",
     layout="wide"
 )
 
-# Define the background style using CSS
+# Define the background color and custom font using CSS
 st.markdown(
     f"""
     <style>
         .stApp {{
-            background: url('background.jpg'); /* Background image */
-            background-size: cover;
-            background-blur: 10px; /* Blur effect for background */
-            color: white; /* Text color */
+            background-color: #2A2A2A; /* Dark background color */
+            color: #FFFFFF; /* Text color */
             font-family: 'Arial', sans-serif; /* Custom font */
         }}
         .container {{
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            flex-direction: row;
         }}
-        .header {{
-            text-align: center;
-            font-size: 36px;
-            margin-bottom: 20px;
-        }}
-        .content {{
-            background-color: rgba(0, 0, 0, 0.5); /* Translucent background for content */
+        .box {{
+            background-color: #34495E; /* Blue-Grey background color */
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
-            text-align: center;
-            max-width: 800px;
-            margin-bottom: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Shadow effect */
+            margin-right: 20px;
         }}
         .box a {{
             text-decoration: none;
-            color: #fff; /* Link color */
+            color: #ECF0F1; /* Link color */
             font-weight: bold;
         }}
         .box a:hover {{
-            color: #ddd; /* Hover effect color */
+            color: #E74C3C; /* Hover effect color */
         }}
         .box h3 {{
-            color: #ddd; /* Section title color */
+            color: #ECF0F1; /* Section title color */
             margin-bottom: 10px;
             font-size: 24px;
         }}
@@ -67,38 +57,48 @@ desired_width = 500
 
 # Add a title and description
 st.image(image, width=desired_width, use_column_width=True)
-st.title("Welcome to Our Beautiful Streamlit Website!")
-st.markdown("Explore the amazing content we have to offer.")
+st.title("Welcome to NexTurn AI Project!")
+st.write("Explore different cases and navigate to specific links.")
 
-# Create a container for the content using custom CSS
+# Create a horizontal layout container using custom CSS
 st.markdown('<div class="container">')
 
-# Section 1
-st.markdown('<div class="content">')
-st.markdown('<h3 class="header">Section 1</h3>', unsafe_allow_html=True)
-st.markdown("This is the content of Section 1.")
-st.markdown("[Link to Section 1](https://example.com/section1)")
+# Case: Images
+st.markdown('<div class="box">')
+st.markdown('<h3>Images</h3>', unsafe_allow_html=True)
+st.markdown("Image 1")
+st.markdown("[Link to Image 1](https://www.example.com/image1)")
+st.markdown("Image 2")
+st.markdown("[Link to Image 2](https://www.example.com/image2)")
+st.markdown("Image 3")
+st.markdown("[Link to Image 3](https://www.example.com/image3)")
 st.markdown('</div>')
 
-# Section 2
-st.markdown('<div class="content">')
-st.markdown('<h3 class="header">Section 2</h3>', unsafe_allow_html=True)
-st.markdown("This is the content of Section 2.")
-st.markdown("[Link to Section 2](https://example.com/section2)")
+# Case: Videos
+st.markdown('<div class="box">')
+st.markdown('<h3>Videos</h3>', unsafe_allow_html=True)
+st.markdown("Video 1")
+st.markdown("[Link to Video 1](https://www.example.com/video1)")
+st.markdown("Video 2")
+st.markdown("[Link to Video 2](https://www.example.com/video2)")
+st.markdown("Video 3")
+st.markdown("[Link to Video 3](https://www.example.com/video3)")
 st.markdown('</div>')
 
-# Section 3
-st.markdown('<div class="content">')
-st.markdown('<h3 class="header">Section 3</h3>', unsafe_allow_html=True)
-st.markdown("This is the content of Section 3.")
-st.markdown("[Link to Section 3](https://example.com/section3)")
+# Case: Audios
+st.markdown('<div class="box">')
+st.markdown('<h3>Audios</h3>', unsafe_allow_html=True)
+st.markdown("Audio 1")
+st.markdown("[Link to Audio 1](https://www.example.com/audio1)")
+st.markdown("Audio 2")
+st.markdown("[Link to Audio 2](https://www.example.com/audio2)")
+st.markdown("Audio 3")
+st.markdown("[Link to Audio 3](https://www.example.com/audio3)")
 st.markdown('</div>')
 
-# Close the container for the content
+# Close the horizontal layout container
 st.markdown('</div>')
 
 # Footer
 st.markdown("---")
-st.write("Thank you for visiting our beautiful website!")
-
-# Display images or additional content as needed
+st.write("Thank you for visiting...!!")
