@@ -49,7 +49,7 @@ image = Image.open("Logo.png")
 width, height = image.size
 
 # Calculate the desired width (in this example, 500 pixels)
-desired_width = 500
+desired_width = 50
 
 # Add a title and description
 st.image(image, width=desired_width, use_column_width=True)
