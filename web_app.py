@@ -31,7 +31,7 @@ st.markdown(
             margin-right: 10px;
         }}
         .videos-box {{
-            background-color: black; /* Black background color */
+            background-color: Red; /* Black background color */
             padding: 10px;
             border-radius: 10px;
             margin-right: 10px;
