@@ -58,9 +58,6 @@ desired_width = 50
 st.image(image, width=desired_width, use_column_width=True)
 st.title("Welcome to NexTurn AI Project!")
 
-# Set the text color to black
-st.write("Explore different cases and navigate to specific links.", unsafe_allow_html=True)
-
 # Create a horizontal layout container using custom CSS
 st.markdown('<div class="container">')
 
