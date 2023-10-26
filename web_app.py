@@ -18,15 +18,16 @@ st.markdown(
             background-image: url('https://raw.githubusercontent.com/RameshMisale/NexTurnAI/main/background.jpg'); /* Background image */
             background-size: cover;
             background-attachment: fixed;
-            filter: brightness(70%); /* Decrease brightness to 50% */
+            filter: brightness(70%); /* Decrease brightness to 70% */
         }}
         .container {{
             display: flex;
             flex-direction: row;
         }}
         .logo {{
-            max-width: 250px; /* Adjust the max width for the logo */
+            max-width: 200px; /* Adjust the max width for the logo (increase size) */
             margin: 10px; /* Add some margin to the logo */
+            filter: brightness(150%); /* Increase brightness to 150% */
         }}
         .content {{
             flex: 1; /* Allow content to take remaining space */
@@ -59,11 +60,11 @@ image = Image.open("Logo.png")
 # Get the dimensions of the image
 width, height = image.size
 
-# Calculate the desired width (in this example, 150 pixels for the logo)
-desired_width = 150
+# Calculate the desired width (in this example, 200 pixels for the logo)
+desired_width = 200
 
 # Add the logo in the top left
-st.image(image, width=desired_width)
+st.image(image, width=desired_width, use_column_width=False, output_format="PNG", output_width=150, output_height=150, use_container_width=False, key="logo")
 
 # Add a title and description
 st.title("Welcome to NexTurn AI Project!")
