@@ -32,7 +32,7 @@ st.markdown(
         .videos-box {{
             background-color: #963939; /* Antique Ruby background color */
             padding: 10px;
-            border-radius: 10px;
+            border-radius: 10px; 
             margin-right: 10px;
         }}
         .audios-box {{
