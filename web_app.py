@@ -20,7 +20,7 @@ st.markdown(
             background-attachment: fixed;
         }}
         .container {{
-            display: flex;
+            display: flex; 
             flex-direction: row;
         }}
         .images-box {{
