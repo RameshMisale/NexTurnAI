@@ -27,32 +27,23 @@ st.markdown(
         .content {{
             flex: 1; /* Allow content to take remaining space */
         }}
-        .images-box {{
-            background-color: #EED9C7; /* Blue background color */
-            padding: 10px;
-            border-radius: 10px;
-            margin-right: 10px;
-        }}
-        .logo {{
-            max-width: 200px; /* Adjust the max width for the logo (increase size) */
-            filter: brightness(150%); /* Increase brightness to 150% */
-        }}
     </style>
     """,
     unsafe_allow_html=True,
 )
 
-# Open the image file
-image = Image.open("Logo.png")
+# Open the image file (logo)
+logo = Image.open("Logo.png")
 
-# Get the dimensions of the image
-width, height = image.size
+# Get the dimensions of the logo image
+logo_width, logo_height = logo.size
 
-# Calculate the desired width (in this example, 200 pixels for the logo)
-desired_width = 200
+# Calculate the desired width and height for the logo (adjust as needed)
+desired_logo_width = 150
+desired_logo_height = int(logo_height * (desired_logo_width / logo_width))
 
-# Add the logo in the top left
-st.image(image, width=desired_width, use_column_width=False, output_format="PNG", key="logo")
+# Add the logo in the top left corner
+st.image(logo, width=desired_logo_width, height=desired_logo_height, use_container_width=False)
 
 # Add a title and description
 st.title("Welcome to NexTurn AI Project!")
