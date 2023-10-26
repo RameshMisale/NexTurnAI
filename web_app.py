@@ -96,5 +96,4 @@ st.markdown('</div>')
 st.markdown("---")
 st.write("Thank you for visiting...!!")
 
-has context menu
-Compose
+
