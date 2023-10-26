@@ -8,7 +8,7 @@ st.set_page_config(
     layout="wide"
 )
 
-# Define the background style using CSS
+# Define the background style using CSS 
 st.markdown(
     f"""
     <style>
