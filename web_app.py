@@ -11,7 +11,7 @@ st.set_page_config(
 # Define the background color using CSS
 st.markdown(
     f"""
-    <style>
+    <style> 
         .stApp {{
             background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
             color: white; /* Text color */
