@@ -31,7 +31,7 @@ st.markdown(
             margin-right: 10px;
         }}
         .videos-box {{
-            background-color: Red; /* Red background color */
+            background-color: red; /* red background color */
             padding: 10px;
             border-radius: 10px;
             margin-right: 10px;
@@ -68,6 +68,7 @@ st.write("Explore different cases and navigate to specific links.")
 
 # Case: Images
 st.markdown('<div class="images-box">Images</div>', unsafe_allow_html=True)
+st.title("Image Section")
 st.markdown("Image 1")
 st.markdown("[Link to Image 1](https://innodataengineers.wordpress.com)")
 st.markdown("Image 2")
@@ -77,6 +78,7 @@ st.markdown("[Link to Image 3](https://www.example.com/image3)")
 
 # Case: Videos
 st.markdown('<div class="videos-box">Videos</div>', unsafe_allow_html=True)
+st.title("Video Section")
 st.markdown("Video 1")
 st.markdown("[Link to Video 1](https://www.example.com/video1)")
 st.markdown("Video 2")
@@ -86,6 +88,7 @@ st.markdown("[Link to Video 3](https://www.example.com/video3)")
 
 # Case: Audios
 st.markdown('<div class="audios-box">Audios</div>', unsafe_allow_html=True)
+st.title("Audio Section")
 st.markdown("Audio 1")
 st.markdown("[Link to Audio 1](https://www.example.com/audio1)")
 st.markdown("Audio 2")
