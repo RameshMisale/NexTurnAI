@@ -18,6 +18,7 @@ st.markdown(
             background-image: url('https://raw.githubusercontent.com/RameshMisale/NexTurnAI/main/background.jpg'); /* Background image */
             background-size: cover;
             background-attachment: fixed;
+            filter: brightness(70%); /* Decrease brightness to 70% */
         }}
         .container {{
             display: flex;
