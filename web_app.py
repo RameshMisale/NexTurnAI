@@ -13,14 +13,14 @@ st.markdown(
     f"""
     <style>
         .stApp {{
-            background-color: transparent; /* Set the background color to transparent */
+            background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
             color: white; /* Text color */
             background-image: url('background.jpg'); /* Background image */
             background-size: cover;
             background-attachment: fixed;
         }}
         .container {{
-            display: flex; 
+            display: flex;
             flex-direction: row;
         }}
         .images-box {{
@@ -32,7 +32,7 @@ st.markdown(
         .videos-box {{
             background-color: #963939; /* Antique Ruby background color */
             padding: 10px;
-            border-radius: 10px; 
+            border-radius: 10px;
             margin-right: 10px;
         }}
         .audios-box {{
