@@ -11,7 +11,7 @@ st.set_page_config(
 # Define the background color using CSS
 st.markdown(
     f"""
-    <style> 
+    <style>
         .stApp {{
             background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
             color: white; /* Text color */
@@ -57,7 +57,9 @@ desired_width = 50
 # Add a title and description
 st.image(image, width=desired_width, use_column_width=True)
 st.title("Welcome to NexTurn AI Project!")
-st.write("Explore different cases and navigate to specific links.")
+
+# Set the text color to white for better visibility
+st.write("Explore different cases and navigate to specific links.", unsafe_allow_html=True)
 
 # Create a horizontal layout container using custom CSS
 st.markdown('<div class="container">')
