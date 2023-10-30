@@ -17,8 +17,8 @@ tabs = st.tabs(["Case 1", "Case 2", "Case 3"])
 if tabs == "Case 1":
     st.write("Content for Case 1")
 
-    # Display cat image
-    st.image("https://static.streamlit.io/examples/cat.jpg", width=200)
+    # Display cat image under Case 1
+    st.image("https://static.streamlit.io/examples/cat.jpg", use_column_width=True)
     st.subheader("Cat")
 
     # Create columns for content
@@ -36,8 +36,8 @@ if tabs == "Case 1":
 elif tabs == "Case 2":
     st.write("Content for Case 2")
 
-    # Display dog image
-    st.image("https://static.streamlit.io/examples/dog.jpg", width=200)
+    # Display dog image under Case 2
+    st.image("https://static.streamlit.io/examples/dog.jpg", use_column_width=True)
     st.subheader("Dog")
 
     # Create columns for content
@@ -55,8 +55,8 @@ elif tabs == "Case 2":
 elif tabs == "Case 3":
     st.write("Content for Case 3")
 
-    # Display owl image
-    st.image("https://static.streamlit.io/examples/owl.jpg", width=200)
+    # Display owl image under Case 3
+    st.image("https://static.streamlit.io/examples/owl.jpg", use_column_width=True)
     st.subheader("Owl")
 
     # Create columns for content
