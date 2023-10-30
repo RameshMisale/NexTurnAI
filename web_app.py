@@ -1,60 +1,24 @@
 import streamlit as st
 
-# Set page title and company logo
-st.set_page_config(
-    page_title="NexTurn AI Project",
-    page_icon=":rocket:",
-    layout="wide"
-)
+# Create tabs using st.radio
+selected_tab = st.radio("Select a tab:", ["Tab 1", "Tab 2", "Tab 3"])
 
-# Logo
-st.image("Logo.jpg")
-st.title("Welcome to NexTurn AI Project")
+# Content for Tab 1
+if selected_tab == "Tab 1":
+    st.header("Tab 1 Content")
+    st.write("This is the content for Tab 1.")
+    st.image("image1.jpg", use_column_width=True)
 
-# Create tabs for cases
-tabs = st.tabs(["Case 1", "Case 2", "Case 3"])
+# Content for Tab 2
+elif selected_tab == "Tab 2":
+    st.header("Tab 2 Content")
+    st.write("This is the content for Tab 2.")
+    st.write("You can add more elements here.")
+    st.image("image2.jpg", use_column_width=True)
 
-if tabs == "Case 1":
-    st.write("Content for Case 1")
-
-    # Create columns for content
-    col1, col2 = st.columns(2)
-
-    with col1:
-        st.subheader("Details for Case 1")
-        st.write("This is the content for Case 1.")
-        st.markdown("You can add more content here.")
-
-    with col2:
-        # Open a new tab with HTML link
-        st.markdown("<a href='https://your-case1-link.com' target='_blank'>Open Case 1</a>", unsafe_allow_html=True)
-
-elif tabs == "Case 2":
-    st.write("Content for Case 2")
-
-    # Create columns for content
-    col1, col2 = st.columns(2)
-
-    with col1:
-        st.subheader("Details for Case 2")
-        st.write("This is the content for Case 2.")
-        st.markdown("You can add more content here.")
-
-    with col2:
-        # Open a new tab with HTML link
-        st.markdown("<a href='https://your-case2-link.com' target='_blank'>Open Case 2</a>", unsafe_allow_html=True)
-
-elif tabs == "Case 3":
-    st.write("Content for Case 3")
-
-    # Create columns for content
-    col1, col2 = st.columns(2)
-
-    with col1:
-        st.subheader("Details for Case 3")
-        st.write("This is the content for Case 3.")
-        st.markdown("You can add more content here.")
-
-    with col2:
-        # Open a new tab with HTML link
-        st.markdown("<a href='https://your-case3-link.com' target='_blank'>Open Case 3</a>", unsafe_allow_html=True)
+# Content for Tab 3
+elif selected_tab == "Tab 3":
+    st.header("Tab 3 Content")
+    st.write("This is the content for Tab 3.")
+    st.write("You can add more elements here.")
+    st.image("image3.jpg", use_column_width=True)
