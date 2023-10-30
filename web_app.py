@@ -8,47 +8,6 @@ st.set_page_config(
     layout="wide"
 )
 
-# Define the background color and text brightness using CSS
-st.markdown(
-    f"""
-    <style>
-        .stApp {{
-            background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
-            color: white; /* Text color */
-            background-image: url('https://raw.githubusercontent.com/RameshMisale/NexTurnAI/main/background.jpg'); /* Background image */
-            background-size: cover;
-            background-attachment: fixed;
-            filter: brightness(80%); /* Reduced background brightness to 80% */
-        }}
-        .container {{
-            display: flex;
-            flex-direction: row;
-        }}
-        .images-box {{
-            background-color: blue; /* blue background color */
-            padding: 10px;
-            border-radius: 10px;
-            margin-right: 10px;
-        }}
-        .videos-box {{
-            background-color: red; /* red background color */
-            padding: 10px;
-            border-radius: 10px;
-            margin-right: 10px;
-        }}
-        .audios-box {{
-            background-color: purple; /* purple background color */
-            padding: 10px;
-            border-radius: 10px;
-        }}
-        .stMarkdown {{
-            filter: brightness(200%); /* Increased text brightness to 200% */
-        }}
-    </style>
-    """,
-    unsafe_allow_html=True,
-)
-
 # Open the image file
 image = Image.open("Logo.png")
 
@@ -66,8 +25,8 @@ st.write("Explore different cases and navigate to specific links.")
 # Create a horizontal layout container using custom CSS
 st.markdown('<div class="container">')
 
-# Create tabs for Images, Videos, and Audios
-tabs = st.tabs(["Images", "Videos", "Audios"])
+# Create tabs for Images and Videos
+tabs = st.tabs(["Images", "Videos"])
 
 if tabs == "Images":
     st.markdown('<div class="images-box">Images</div>', unsafe_allow_html=True)
@@ -89,41 +48,9 @@ elif tabs == "Videos":
     st.markdown("Video 3")
     st.markdown("[Link to Video 3](https://www.example.com/video3)")
 
-else:
-    st.markdown('<div class="audios-box">Audios</div>', unsafe_allow_html=True)
-    st.title("Audio Section")
-    st.markdown("Audio 1")
-    st.markdown("[Link to Audio 1](https://www.example.com/audio1)")
-    st.markdown("Audio 2")
-    st.markdown("[Link to Audio 2](https://www.example.com/audio2)")
-    st.markdown("Audio 3")
-    st.markdown("[Link to Audio 3](https://www.example.com/audio3)")
-
 # Close the horizontal layout container
 st.markdown('</div>')
 
 # Footer
 st.markdown("---")
-
-import streamlit as st
-
-# Create columns for text below Images, Videos, and Audios
-col1, col2, col3 = st.columns(3)
-
-with col1:
-    st.header("Images")
-    st.text("Link 1")
-    st.text("Link 2")
-    st.text("Link 3")
-
-with col2:
-    st.header("Videos")
-    st.text("Link 1")
-    st.text("Link 2")
-    st.text("Link 3")
-
-with col3:
-    st.header("Audios")
-    st.text("Link 1")
-    st.text("Link 2")
-    st.text("Link 3")
+st.write("Thank you for visiting...!!")
