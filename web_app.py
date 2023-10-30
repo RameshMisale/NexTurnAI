@@ -7,9 +7,14 @@ st.set_page_config(
     layout="wide"
 )
 
-# Logo
-st.image("Logo.jpg")
+# Create a horizontal layout using custom CSS
+st.markdown('<style> .row-display { display: flex; align-items: center; } </style>', unsafe_allow_html=True)
+
+# Logo and title within the same row
+st.markdown('<div class="row-display">', unsafe_allow_html=True)
+st.image("Logo.jpg", width=50, use_column_width=False)
 st.title("Welcome to NexTurn AI Project")
+st.markdown('</div>', unsafe_allow_html=True)
 
 # Create tabs for cases
 tabs = st.tabs(["Case 1", "Case 2", "Case 3"])
