@@ -8,7 +8,7 @@ st.set_page_config(
 )
 
 # Logo
-st.image("Logo.png")
+st.image("Logo.jpg")
 st.title("Welcome to NexTurn AI Project")
 
 # Create tabs for cases
