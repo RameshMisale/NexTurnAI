@@ -17,8 +17,8 @@ tabs = st.tabs(["Case 1", "Case 2", "Case 3"])
 if tabs == "Case 1":
     st.write("Content for Case 1")
 
-    # Display cat image under Case 1
-    st.image("https://raw.githubusercontent.com/RameshMisale/NexTurnAI/main/cat.jpg", use_column_width=True)
+    # Display cat image under Case 1 (use the local file path)
+    st.image("cat.jpg", use_column_width=True)
     st.subheader("Cat")
 
     # Create columns for content
@@ -36,8 +36,8 @@ if tabs == "Case 1":
 elif tabs == "Case 2":
     st.write("Content for Case 2")
 
-    # Display dog image under Case 2
-    st.image("https://raw.githubusercontent.com/RameshMisale/NexTurnAI/main/dog.jpg", use_column_width=True)
+    # Display dog image under Case 2 (use the local file path)
+    st.image("dog.jpg", use_column_width=True)
     st.subheader("Dog")
 
     # Create columns for content
@@ -55,8 +55,8 @@ elif tabs == "Case 2":
 elif tabs == "Case 3":
     st.write("Content for Case 3")
 
-    # Display owl image under Case 3
-    st.image("https://raw.githubusercontent.com/RameshMisale/NexTurnAI/main/owl.jpg", use_column_width=True)
+    # Display owl image under Case 3 (use the local file path)
+    st.image("owl.jpg", use_column_width=True)
     st.subheader("Owl")
 
     # Create columns for content
