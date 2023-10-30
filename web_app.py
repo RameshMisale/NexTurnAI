@@ -18,7 +18,7 @@ if tabs == "Case 1":
     st.write("Content for Case 1")
 
     # Display cat image under Case 1
-    st.image("https://static.streamlit.io/examples/cat.jpg", use_column_width=True)
+    st.image("https://github.com/RameshMisale/NexTurnAI/blob/main/cat.jpg", use_column_width=True)
     st.subheader("Cat")
 
     # Create columns for content
@@ -37,7 +37,7 @@ elif tabs == "Case 2":
     st.write("Content for Case 2")
 
     # Display dog image under Case 2
-    st.image("https://static.streamlit.io/examples/dog.jpg", use_column_width=True)
+    st.image("https://github.com/RameshMisale/NexTurnAI/blob/main/dog.jpg", use_column_width=True)
     st.subheader("Dog")
 
     # Create columns for content
@@ -56,7 +56,7 @@ elif tabs == "Case 3":
     st.write("Content for Case 3")
 
     # Display owl image under Case 3
-    st.image("https://static.streamlit.io/examples/owl.jpg", use_column_width=True)
+    st.image("https://github.com/RameshMisale/NexTurnAI/blob/main/owl.jpg", use_column_width=True)
     st.subheader("Owl")
 
     # Create columns for content
