@@ -78,6 +78,7 @@ if tabs == "Images":
     st.markdown("[Link to Image 2](https://www.example.com/image2)")
     st.markdown("Image 3")
     st.markdown("[Link to Image 3](https://www.example.com/image3)")
+
 elif tabs == "Videos":
     st.markdown('<div class="videos-box">Videos</div>', unsafe_allow_html=True)
     st.title("Video Section")
@@ -87,6 +88,7 @@ elif tabs == "Videos":
     st.markdown("[Link to Video 2](https://www.example.com/video2)")
     st.markdown("Video 3")
     st.markdown("[Link to Video 3](https://www.example.com/video3)")
+
 else:
     st.markdown('<div class="audios-box">Audios</div>', unsafe_allow_html=True)
     st.title("Audio Section")
@@ -102,20 +104,26 @@ st.markdown('</div>')
 
 # Footer
 st.markdown("---")
-st.write("Thank you for visiting...!!")
 
 import streamlit as st
 
+# Create columns for text below Images, Videos, and Audios
 col1, col2, col3 = st.columns(3)
 
 with col1:
-   st.header("Column 1")
-   st.text("This is some text in the first column.")
+    st.header("Images")
+    st.text("Link 1")
+    st.text("Link 2")
+    st.text("Link 3")
 
 with col2:
-   st.header("Column 2")
-   st.text("This is some text in the second column.")
+    st.header("Videos")
+    st.text("Link 1")
+    st.text("Link 2")
+    st.text("Link 3")
 
 with col3:
-   st.header("Column 3")
-   st.text("This is some text in the third column.")
+    st.header("Audios")
+    st.text("Link 1")
+    st.text("Link 2")
+    st.text("Link 3")
