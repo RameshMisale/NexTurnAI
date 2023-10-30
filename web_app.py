@@ -1,24 +1,72 @@
 import streamlit as st
 
-# Create tabs
-tab1, tab2, tab3 = st.columns(3)
+# Set page title and company logo
+st.set_page_config(
+    page_title="NexTurn AI Project",
+    page_icon=":rocket:",
+    layout="wide"
+)
 
-with tab1:
-    if st.button("Tab 1"):
-        st.header("Tab 1 Content")
-        st.write("This is the content for Tab 1.")
-        st.image("image1.jpg", use_column_width=True)
+# Logo and title
+st.image("Logo.jpg", width=100, use_column_width=False)
+st.title("Welcome to NexTurn AI Project")
 
-with tab2:
-    if st.button("Tab 2"):
-        st.header("Tab 2 Content")
-        st.write("This is the content for Tab 2.")
-        st.write("You can add more elements here.")
-        st.image("image2.jpg", use_column_width=True)
+# Create tabs for cases
+tabs = st.tabs(["Case 1", "Case 2", "Case 3"])
 
-with tab3:
-    if st.button("Tab 3"):
-        st.header("Tab 3 Content")
-        st.write("This is the content for Tab 3.")
-        st.write("You can add more elements here.")
-        st.image("image3.jpg", use_column_width=True)
+if tabs == "Case 1":
+    st.write("Content for Case 1")
+
+    # Display cat image
+    st.image("https://static.streamlit.io/examples/cat.jpg", width=200)
+    st.subheader("Cat")
+
+    # Create columns for content
+    col1, col2 = st.columns(2)
+
+    with col1:
+        st.subheader("Details for Case 1")
+        st.write("This is the content for Case 1.")
+        st.markdown("You can add more content here.")
+
+    with col2:
+        # Open a new tab with HTML link
+        st.markdown("<a href='https://your-case1-link.com' target='_blank'>Open Case 1</a>", unsafe_allow_html=True)
+
+elif tabs == "Case 2":
+    st.write("Content for Case 2")
+
+    # Display dog image
+    st.image("https://static.streamlit.io/examples/dog.jpg", width=200)
+    st.subheader("Dog")
+
+    # Create columns for content
+    col1, col2 = st.columns(2)
+
+    with col1:
+        st.subheader("Details for Case 2")
+        st.write("This is the content for Case 2.")
+        st.markdown("You can add more content here.")
+
+    with col2:
+        # Open a new tab with HTML link
+        st.markdown("<a href='https://your-case2-link.com' target='_blank'>Open Case 2</a>", unsafe_allow_html=True)
+
+elif tabs == "Case 3":
+    st.write("Content for Case 3")
+
+    # Display owl image
+    st.image("https://static.streamlit.io/examples/owl.jpg", width=200)
+    st.subheader("Owl")
+
+    # Create columns for content
+    col1, col2 = st.columns(2)
+
+    with col1:
+        st.subheader("Details for Case 3")
+        st.write("This is the content for Case 3.")
+        st.markdown("You can add more content here.")
+
+    with col2:
+        # Open a new tab with HTML link
+        st.markdown("<a href='https://your-case3-link.com' target='_blank'>Open Case 3</a>", unsafe_allow_html=True)
