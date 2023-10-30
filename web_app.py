@@ -33,4 +33,40 @@ if tabs == "Case 1":
         # Open a new tab with HTML link
         st.markdown("<a href='https://your-case1-link.com' target='_blank'>Open Case 1</a>", unsafe_allow_html=True)
 
-# ... (similar modifications for Case 2 and Case 3)
+elif tabs == "Case 2":
+    st.write("Content for Case 2")
+
+    # Display dog image under Case 2
+    st.image("https://raw.githubusercontent.com/RameshMisale/NexTurnAI/main/dog.jpg", use_column_width=True)
+    st.subheader("Dog")
+
+    # Create columns for content
+    col1, col2 = st.columns(2)
+
+    with col1:
+        st.subheader("Details for Case 2")
+        st.write("This is the content for Case 2.")
+        st.markdown("You can add more content here.")
+
+    with col2:
+        # Open a new tab with HTML link
+        st.markdown("<a href='https://your-case2-link.com' target='_blank'>Open Case 2</a>", unsafe_allow_html=True)
+
+elif tabs == "Case 3":
+    st.write("Content for Case 3")
+
+    # Display owl image under Case 3
+    st.image("https://raw.githubusercontent.com/RameshMisale/NexTurnAI/main/owl.jpg", use_column_width=True)
+    st.subheader("Owl")
+
+    # Create columns for content
+    col1, col2 = st.columns(2)
+
+    with col1:
+        st.subheader("Details for Case 3")
+        st.write("This is the content for Case 3.")
+        st.markdown("You can add more content here.")
+
+    with col2:
+        # Open a new tab with HTML link
+        st.markdown("<a href='https://your-case3-link.com' target='_blank'>Open Case 3</a>", unsafe_allow_html=True)
