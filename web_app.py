@@ -11,68 +11,67 @@ st.set_page_config(
 st.image("Logo.jpg", width=400, use_column_width=False)  # Adjust the width value
 st.title("Welcome to NexTurn AI Project")
 
-# Create tabs for cases
-tabs1, tabs2, tabs3 = st.tabs(["Images", "Videos", "Audios"])
+# Create tabs for sections
+tabs = st.tabs(["Images Cases", "Videos Cases", "Audios Cases"])
 
-if tabs1:
-    st.write("Images Cases")
+# Create containers for each section
+with st.container():
+    if tabs == "Images Cases":
+        st.write("Images Cases")
+        # Create columns for content
+        col1, col2, col3 = st.columns(3)
 
-    # Create columns for content
-    col1, col2, col3 = st.columns(3)
+        with col1:
+            st.subheader("Case 1")
+            st.write("This is the content for Images Case 1.")
+            st.markdown("You can add more content here.")
 
-    with col1:
-        st.subheader("Case 1")
-        st.write("This is the content for Images Case 1.")
-        st.markdown("You can add more content here.")
+        with col2:
+            st.subheader("Case 2")
+            st.write("You can add content here for Images Case 2.")
+            st.markdown("Additional information goes here.")
 
-    with col2:
-        st.subheader("Case 2")
-        st.write("You can add content here for Images Case 2.")
-        st.markdown("Additional information goes here.")
+        with col3:
+            st.subheader("Case 3")
+            st.write("You can add content here for Images Case 3.")
+            st.markdown("More information goes here.")
 
-    with col3:
-        st.subheader("Case 3")
-        st.write("You can add content here for Images Case 3.")
-        st.markdown("More information goes here.")
+    elif tabs == "Videos Cases":
+        st.write("Videos Cases")
+        # Create columns for content
+        col1, col2, col3 = st.columns(3)
 
-if tabs2:
-    st.write("Videos Cases")
+        with col1:
+            st.subheader("Case 1")
+            st.write("This is the content for Videos Case 1.")
+            st.markdown("You can add more content here.")
 
-    # Create columns for content
-    col1, col2, col3 = st.columns(3)
+        with col2:
+            st.subheader("Case 2")
+            st.write("You can add content here for Videos Case 2.")
+            st.markdown("Additional information goes here.")
 
-    with col1:
-        st.subheader("Case 1")
-        st.write("This is the content for Videos Case 1.")
-        st.markdown("You can add more content here.")
+        with col3:
+            st.subheader("Case 3")
+            st.write("You can add content here for Videos Case 3.")
+            st.markdown("More information goes here.")
 
-    with col2:
-        st.subheader("Case 2")
-        st.write("You can add content here for Videos Case 2.")
-        st.markdown("Additional information goes here.")
+    elif tabs == "Audios Cases":
+        st.write("Audios Cases")
+        # Create columns for content
+        col1, col2, col3 = st.columns(3)
 
-    with col3:
-        st.subheader("Case 3")
-        st.write("You can add content here for Videos Case 3.")
-        st.markdown("More information goes here.")
+        with col1:
+            st.subheader("Case 1")
+            st.write("This is the content for Audios Case 1.")
+            st.markdown("You can add more content here.")
 
-if tabs3:
-    st.write("Audios Cases")
+        with col2:
+            st.subheader("Case 2")
+            st.write("You can add content here for Audios Case 2.")
+            st.markdown("Additional information goes here.")
 
-    # Create columns for content
-    col1, col2, col3 = st.columns(3)
-
-    with col1:
-        st.subheader("Case 1")
-        st.write("This is the content for Audios Case 1.")
-        st.markdown("You can add more content here.")
-
-    with col2:
-        st.subheader("Case 2")
-        st.write("You can add content here for Audios Case 2.")
-        st.markdown("Additional information goes here.")
-
-    with col3:
-        st.subheader("Case 3")
-        st.write("You can add content here for Audios Case 3.")
-        st.markdown("More information goes here.")
+        with col3:
+            st.subheader("Case 3")
+            st.write("You can add content here for Audios Case 3.")
+            st.markdown("More information goes here.")
