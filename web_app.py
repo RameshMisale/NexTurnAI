@@ -5,7 +5,7 @@ st.set_page_config(
     page_title="NexTurn AI Project",
     page_icon=":rocket:",
     layout="wide"
-)
+) 
 
 # Logo and title
 st.image("Logo.jpg", width=100, use_column_width=False)
