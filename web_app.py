@@ -15,15 +15,15 @@ st.title("Welcome to NexTurn AI Project")
 tabs1, tabs2, tabs3 = st.tabs(["Images", "Videos", "Audios"])
 #st.write(tabs)
 
-# if tabs1:
-#     st.write("Case 1")
+if tabs1:
+    st.write("Case 1")
 
-#     # Display cat image under Case 1 (use the local file path)
-#     #st.image("cat.jpg", use_column_width=True) -
-#     #st.subheader("Cat") -
+    # Display cat image under Case 1 (use the local file path)
+    #st.image("cat.jpg", use_column_width=True) -
+    #st.subheader("Cat") -
 
-#     # Create columns for content
-#     col1, col2, col3 = st.columns(3)
+    # Create columns for content
+    col1, col2, col3 = st.columns(3)
 
     with col1:
         st.subheader("Case 1")
