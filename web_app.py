@@ -15,7 +15,7 @@ st.title("Welcome to NexTurn AI Project")
 tabs1, tabs2, tabs3 = st.tabs(["Images", "Videos", "Audios"])
 
 if tabs1:
-    st.write("Case 1")
+    st.write("Sample Cases")
 
     # Create columns for content
     col1, col2, col3 = st.columns(3)
@@ -36,7 +36,7 @@ if tabs1:
         st.markdown("More information goes here.")
 
 if tabs2:
-    st.write("Case 2")
+    st.write("Sample Cases")
 
     # Create columns for content
     col1, col2, col3 = st.columns(3)
@@ -57,7 +57,7 @@ if tabs2:
         st.markdown("More information goes here.")
 
 if tabs3:
-    st.write("Content for Case 3")
+    st.write("Sample Cases")
 
     # Create columns for content
     col1, col2, col3 = st.columns(3)
