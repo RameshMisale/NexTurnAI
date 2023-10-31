@@ -13,7 +13,7 @@ st.title("Welcome to NexTurn AI Project")
 
 # Create tabs for cases
 tabs1, tabs2, tabs3 = st.tabs(["Case 1", "Case 2", "Case 3"])
-st.write(tabs)
+#st.write(tabs)
 with tabs1:
     st.write("Content for Case 1")
 
