@@ -23,7 +23,7 @@ if tabs1:
     with col1:
         st.subheader("Case 1")
         st.write("This is the content for Case 1.")
-        st.markdown("https://www.example.com", unsafe_allow_html=True")
+        st.markdown("https://www.example.com", unsafe_allow_html=True)
 
     with col2:
         st.subheader("Case 2")
