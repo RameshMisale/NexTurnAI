@@ -28,12 +28,12 @@ if tabs1:
     with col2:
         st.subheader("Case 2")
         st.write("You can add content here.")
-        st.markdown("https://www.example.com", unsafe_allow_html=True")
+        st.markdown("https://www.example.com", unsafe_allow_html=True)
 
     with col3:
         st.subheader("Case 3")
         st.write("You can add content here.")
-        st.markdown("https://www.example.com", unsafe_allow_html=True")
+        st.markdown("https://www.example.com", unsafe_allow_html=True)
 
 if tabs2:
     st.write("Sample Cases")
