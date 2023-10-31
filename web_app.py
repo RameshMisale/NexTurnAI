@@ -16,7 +16,7 @@ tabs1, tabs2, tabs3 = st.tabs(["Case 1", "Case 2", "Case 3"])
 #st.write(tabs)
 
 if tabs1:
-    st.write("Case 1")
+    st.write("Images")
 
     # Display cat image under Case 1 (use the local file path)
     st.image("cat.jpg", use_column_width=True)
@@ -26,7 +26,7 @@ if tabs1:
     col1, col2, col3 = st.columns(3)
 
     with col1:
-        st.subheader("Case 1")
+        st.subheader("Videos")
         st.write("This is the content for Case 1.")
         st.markdown("You can add more content here.")
 
@@ -41,7 +41,7 @@ if tabs1:
         st.markdown("More information goes here.")
 
 if tabs2:
-    st.write("Case 2")
+    st.write("Audios")
 
     # Display dog image under Case 2 (use the local file path)
     st.image("dog.jpg", use_column_width=True)
