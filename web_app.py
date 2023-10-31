@@ -12,9 +12,9 @@ st.image("Logo.jpg", width=100, use_column_width=False)
 st.title("Welcome to NexTurn AI Project")
 
 # Create tabs for cases
-tabs = st.tabs(["Case 1", "Case 2", "Case 3"])
+tabs1, tabs2, tabs3 = st.tabs(["Case 1", "Case 2", "Case 3"])
 st.write(tabs)
-if tabs == "Case 1":
+with tabs1:
     st.write("Content for Case 1")
 
     # Display cat image under Case 1 (use the local file path)
@@ -33,7 +33,7 @@ if tabs == "Case 1":
         # Open a new tab with HTML link
         st.markdown("<a href='https://your-case1-link.com' target='_blank'>Open Case 1</a>", unsafe_allow_html=True)
 
-elif tabs == "Case 2":
+with tabs2 :
     st.write("Content for Case 2")
 
     # Display dog image under Case 2 (use the local file path)
@@ -52,7 +52,7 @@ elif tabs == "Case 2":
         # Open a new tab with HTML link
         st.markdown("<a href='https://your-case2-link.com' target='_blank'>Open Case 2</a>", unsafe_allow_html=True)
 
-elif tabs == "Case 3":
+with tabs3:
     st.write("Content for Case 3")
 
     # Display owl image under Case 3 (use the local file path)
