@@ -12,11 +12,11 @@ st.image("Logo.jpg", width=100, use_column_width=False)
 st.title("Welcome to NexTurn AI Project")
 
 # Create tabs for cases
-tabs1, tabs2, tabs3 = st.tabs(["Case 1", "Case 2", "Case 3"])
+tabs1, tabs2, tabs3 = st.tabs(["Images", "Videos", "Audios"])
 #st.write(tabs)
 
 if tabs1:
-    st.write("Images")
+    st.write("Case 1")
 
     # Display cat image under Case 1 (use the local file path)
     st.image("cat.jpg", use_column_width=True)
@@ -26,7 +26,7 @@ if tabs1:
     col1, col2, col3 = st.columns(3)
 
     with col1:
-        st.subheader("Videos")
+        st.subheader("Case 1")
         st.write("This is the content for Case 1.")
         st.markdown("You can add more content here.")
 
@@ -41,7 +41,7 @@ if tabs1:
         st.markdown("More information goes here.")
 
 if tabs2:
-    st.write("Audios")
+    st.write("Case 2")
 
     # Display dog image under Case 2 (use the local file path)
     st.image("dog.jpg", use_column_width=True)
@@ -51,7 +51,7 @@ if tabs2:
     col1, col2, col3 = st.columns(3)
 
     with col1:
-        st.subheader("Case 2")
+        st.subheader("Case 1")
         st.write("This is the content for Case 2.")
         st.markdown("You can add more content here.")
 
@@ -76,7 +76,7 @@ if tabs3:
     col1, col2, col3 = st.columns(3)
 
     with col1:
-        st.subheader("Case 3")
+        st.subheader("Case 1")
         st.write("This is the content for Case 3.")
         st.markdown("You can add more content here.")
 
