@@ -19,8 +19,8 @@ if tabs1:
     st.write("Case 1")
 
     # Display cat image under Case 1 (use the local file path)
-    st.image("cat.jpg", use_column_width=True)
-    st.subheader("Cat")
+    #st.image("cat.jpg", use_column_width=True) -
+    #st.subheader("Cat") -
 
     # Create columns for content
     col1, col2, col3 = st.columns(3)
@@ -44,8 +44,8 @@ if tabs2:
     st.write("Case 2")
 
     # Display dog image under Case 2 (use the local file path)
-    st.image("dog.jpg", use_column_width=True)
-    st.subheader("Dog")
+    # st.image("dog.jpg", use_column_width=True)-
+    # st.subheader("Dog")-
 
     # Create columns for content
     col1, col2, col3 = st.columns(3)
@@ -69,8 +69,8 @@ if tabs3:
     st.write("Content for Case 3")
 
     # Display owl image under Case 3 (use the local file path)
-    st.image("owl.jpg", use_column_width=True)
-    st.subheader("Owl")
+    # st.image("owl.jpg", use_column_width=True)-
+    # st.subheader("Owl")-
 
     # Create columns for content
     col1, col2, col3 = st.columns(3)
