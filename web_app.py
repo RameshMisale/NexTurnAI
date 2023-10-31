@@ -5,22 +5,17 @@ st.set_page_config(
     page_title="NexTurn AI Project",
     page_icon=":rocket:",
     layout="wide"
-) 
+)
 
-# Logo and title
-st.image("Logo.jpg", width=100, use_column_width=False)
+# Logo and title with an increased size
+st.image("Logo.jpg", width=200, use_column_width=False)  # Adjust the width value
 st.title("Welcome to NexTurn AI Project")
 
 # Create tabs for cases
 tabs1, tabs2, tabs3 = st.tabs(["Images", "Videos", "Audios"])
-#st.write(tabs)
 
 if tabs1:
     st.write("Case 1")
-
-    # Display cat image under Case 1 (use the local file path)
-    #st.image("cat.jpg", use_column_width=True) -
-    #st.subheader("Cat") -
 
     # Create columns for content
     col1, col2, col3 = st.columns(3)
@@ -43,10 +38,6 @@ if tabs1:
 if tabs2:
     st.write("Case 2")
 
-    # Display dog image under Case 2 (use the local file path)
-    # st.image("dog.jpg", use_column_width=True)-
-    # st.subheader("Dog")-
-
     # Create columns for content
     col1, col2, col3 = st.columns(3)
 
@@ -67,10 +58,6 @@ if tabs2:
 
 if tabs3:
     st.write("Content for Case 3")
-
-    # Display owl image under Case 3 (use the local file path)
-    # st.image("owl.jpg", use_column_width=True)-
-    # st.subheader("Owl")-
 
     # Create columns for content
     col1, col2, col3 = st.columns(3)
