@@ -12,10 +12,9 @@ st.image("Logo.jpg", width=400, use_column_width=False)  # Adjust the width valu
 st.title("Welcome to NexTurn AI Project")
 
 # Create a sidebar for navigation
-sidebar = st.sidebar()
-
-# Add a radio button to select the section
-selected_section = sidebar.radio("Select a Section", ["Images Cases", "Videos Cases", "Audios Cases"])
+with st.sidebar:
+    # Add a radio button to select the section
+    selected_section = st.radio("Select a Section", ["Images Cases", "Videos Cases", "Audios Cases"])
 
 if selected_section == "Images Cases":
     st.write("Images Cases")
