@@ -11,70 +11,68 @@ st.set_page_config(
 st.image("Logo.jpg", width=400, use_column_width=False)  # Adjust the width value
 st.title("Welcome to NexTurn AI Project")
 
-# Create a sidebar for navigation
-with st.sidebar:
-    # Add a radio button to select the section
-    selected_section = st.radio("Select a Section", ["Images Cases", "Videos Cases", "Audios Cases"])
+# Create tabs for cases
+tabs1, tabs2, tabs3 = st.tabs(["Images", "Videos", "Audios"])
 
-if selected_section == "Images Cases":
-    st.write("Images Cases")
+if tabs1:
+    st.write("Sample Cases")
 
-    # Create a container for Case 1
-    with st.container():
+    # Create columns for content
+    col1, col2, col3 = st.columns(3)
+
+    with col1:
         st.subheader("Case 1")
-        st.write("This is the content for Images Case 1.")
+        st.write("This is the content for Case 1.")
         st.markdown("You can add more content here.")
 
-    # Create a container for Case 2
-    with st.container():
+    with col2:
         st.subheader("Case 2")
-        st.write("You can add content here for Images Case 2.")
+        st.write("You can add content here.")
         st.markdown("Additional information goes here.")
 
-    # Create a container for Case 3
-    with st.container():
+    with col3:
         st.subheader("Case 3")
-        st.write("You can add content here for Images Case 3.")
+        st.write("You can add content here.")
         st.markdown("More information goes here.")
 
-elif selected_section == "Videos Cases":
-    st.write("Videos Cases")
+if tabs2:
+    st.write("Sample Cases")
 
-    # Create a container for Case 1
-    with st.container():
+    # Create columns for content
+    col1, col2, col3 = st.columns(3)
+
+    with col1:
         st.subheader("Case 1")
-        st.write("This is the content for Videos Case 1.")
+        st.write("This is the content for Case 2.")
         st.markdown("You can add more content here.")
 
-    # Create a container for Case 2
-    with st.container():
+    with col2:
         st.subheader("Case 2")
-        st.write("You can add content here for Videos Case 2.")
+        st.write("You can add content here.")
         st.markdown("Additional information goes here.")
 
-    # Create a container for Case 3
-    with st.container():
+    with col3:
         st.subheader("Case 3")
-        st.write("You can add content here for Videos Case 3.")
+        st.write("You can add content here.")
         st.markdown("More information goes here.")
 
-elif selected_section == "Audios Cases":
-    st.write("Audios Cases")
+if tabs3:
+    st.write("Sample Cases")
 
-    # Create a container for Case 1
-    with st.container():
+    # Create columns for content
+    col1, col2, col3 = st.columns(3)
+
+    with col1:
         st.subheader("Case 1")
-        st.write("This is the content for Audios Case 1.")
+        st.write("This is the content for Case 3.")
         st.markdown("You can add more content here.")
 
-    # Create a container for Case 2
-    with st.container():
+    with col2:
         st.subheader("Case 2")
-        st.write("You can add content here for Audios Case 2.")
+        st.write("You can add content here.")
         st.markdown("Additional information goes here.")
 
-    # Create a container for Case 3
-    with st.container():
+    with col3:
         st.subheader("Case 3")
-        st.write("You can add content here for Audios Case 3.")
+        st.write("You can add content here.")
         st.markdown("More information goes here.")
