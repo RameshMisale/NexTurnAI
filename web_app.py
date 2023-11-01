@@ -68,7 +68,5 @@ if selected_tab in cases:
     for case, case_data in tab_content.items():
         with col1:
             st.subheader(case)
-        with col2:
             st.write(case_data["content"])
-        with col3:
             st.markdown(f"[Open {case}]({case_data['link']})", unsafe_allow_html=True)
