@@ -1,11 +1,14 @@
+#import streamlit as st
+
 import streamlit as st
 
 # Set page title and company logo
 st.set_page_config(
-  page_title="NexTurn AI Project",
-  page_icon=":rocket:",
-  layout="wide"
+    page_title="NexTurn AI Project",
+    page_icon=":rocket:",
+    layout="wide"
 )
+
 
 # Logo and title with an increased size
 st.image("Logo.png", width=400, use_column_width=False) # Adjust the width value
