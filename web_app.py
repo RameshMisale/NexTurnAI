@@ -1,4 +1,4 @@
-[Monday 14:18] Ramesh Misale
+
 import streamlit as st
 
 from PIL import Image
