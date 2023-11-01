@@ -12,20 +12,30 @@ st.image("Logo.png", width=400, use_column_width=False)  # Increase the width va
 st.title("Welcome to NexTurn AI Project")
 
 # Create tabs for cases
-tabs1, tabs2, tabs3 = st.tabs(["Case 1", "Case 2", "Case 3"])
+tabs1, tabs2, tabs3 = st.tabs(["Images", "Videos", "Audios"])
 
 with tabs1:
-    st.write("Content for Case 1")
+    st.write("Content for image cases")
  
-    col1, col2 = st.columns(2)
+    col1, col2, col3 = st.columns(3)
  
     with col1:
         st.subheader("Details for Case 1")
         st.write("This is the content for Case 1.")
         st.markdown("You can add more content here.")
- 
+
     with col2:
-        st.markdown("<a href='https://your-case1-link.com' target='_blank'>Open Case 1</a>", unsafe_allow_html=True)
+        st.subheader("Details for Case 2")
+        st.write("This is the content for Case 2.")
+        st.markdown("You can add more content here.")
+
+    with col3:
+        st.subheader("Details for Case 3")
+        st.write("This is the content for Case 3.")
+        st.markdown("You can add more content here.")
+ 
+    # with col2:
+    #     st.markdown("<a href='https://your-case1-link.com' target='_blank'>Open Case 1</a>", unsafe_allow_html=True)
 
 with tabs2:
     st.write("Content for Case 2")
