@@ -65,10 +65,18 @@ cases = {
 if selected_tab in cases:
     tab_content = cases[selected_tab]
     
-    col1, col2, col3 = st.columns(3)
+    col1, col2 = st.columns(2)
     
-    for case, case_data in tab_content.items():
+    for case in tab_content:
         with col1:
             st.subheader(case)
-            st.write(case_data["content"])
-            st.markdown(f"[Open {case}]({case_data['link']})", unsafe_allow_html=True)
+            st.write(tab_content[case]["content"])
+            st.markdown(f"[Open {case}]({tab_content[case]['link']})", unsafe_allow_html=True)
+            
+    # If there's a next case, display it in the second column
+    next_case = list(tab_content.keys())[1:]
+    if next_case:
+        with col2:
+            st.subheader(next_case[0])
+            st.write(tab_content[next_case[0]]["content"])
+            st.markdown(f"[Open {next_case[0]}]({tab_content[next_case[0]]['link']})", unsafe_allow_html=True)
