@@ -61,24 +61,11 @@ cases = {
     }
 }
 
-# Display the selected tab's cases with links, subheaders, and content side by side
+# Display the selected tab's cases with links, subheaders, and content sequentially
 if selected_tab in cases:
     tab_content = cases[selected_tab]
     
-    col1, col2 = st.columns(2)
-    
-    case_keys = list(tab_content.keys())
-    
-    for i in range(len(case_keys) - 1):
-        case = case_keys[i]
-        next_case = case_keys[i + 1]
-        
-        with col1:
-            st.subheader(case)
-            st.write(tab_content[case]["content"])
-            st.markdown(f"[Open {case}]({tab_content[case]['link']})", unsafe_allow_html=True)
-        
-        with col2:
-            st.subheader(next_case)
-            st.write(tab_content[next_case]["content"])
-            st.markdown(f"[Open {next_case}]({tab_content[next_case]['link']})", unsafe_allow_html=True)
+    for case in tab_content:
+        st.subheader(case)
+        st.write(tab_content[case]["content"])
+        st.markdown(f"[Open {case}]({tab_content[case]['link']})", unsafe_allow_html=True)
