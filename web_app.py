@@ -7,66 +7,67 @@ st.set_page_config(
     layout="wide"
 )
  
-# Logo and title
-st.image("Logo.jpg", width=100, use_column_width=False)
+# Logo and title with an increased size
+st.image("Logo.png", width=400, use_column_width=False)  # Adjust the width value
 st.title("Welcome to NexTurn AI Project")
  
-# Create tabs for cases
-tabs1, tabs2, tabs3 = st.tabs(["Case 1", "Case 2", "Case 3"])
-#st.write(tabs)
-with tabs1:
-    st.write("Content for Case 1")
+# Create a radio button for selecting tabs
+selected_tab = st.radio("Select a tab:", ["Images", "Videos", "Audios"])
  
-    # Display cat image under Case 1 (use the local file path)
-    st.image("cat.jpg", use_column_width=True)
-    st.subheader("Cat")
+# Create columns for content
+col1, col2, col3 = st.columns(3)
  
-    # Create columns for content
-    col1, col2 = st.columns(2)
+# Add content based on the selected tab
+if selected_tab == "Images":
+    st.subheader("Images Cases")
  
     with col1:
-        st.subheader("Details for Case 1")
-        st.write("This is the content for Case 1.")
-        st.markdown("You can add more content here.")
+        st.subheader("Case 1")
+        st.write("This is the content for Images Case 1.")
+        st.markdown("[Open in a new browser](https://www.example.com)", unsafe_allow_html=True)
  
     with col2:
-        # Open a new tab with HTML link
-        st.markdown("<a href='https://your-case1-link.com' target='_blank'>Open Case 1</a>", unsafe_allow_html=True)
+        st.subheader("Case 2")
+        st.write("You can add content here for Images Case 2.")
+        st.markdown("[Open in a new browser](https://www.example.com)", unsafe_allow_html=True)
  
-with tabs2 :
-    st.write("Content for Case 2")
+    with col3:
+        st.subheader("Case 3")
+        st.write("You can add content here for Images Case 3.")
+        st.markdown("[Open in a new browser](https://www.example.com)", unsafe_allow_html=True)
  
-    # Display dog image under Case 2 (use the local file path)
-    st.image("dog.jpg", use_column_width=True)
-    st.subheader("Dog")
- 
-    # Create columns for content
-    col1, col2 = st.columns(2)
+elif selected_tab == "Videos":
+    st.subheader("Videos Cases")
  
     with col1:
-        st.subheader("Details for Case 2")
-        st.write("This is the content for Case 2.")
-        st.markdown("You can add more content here.")
+        st.subheader("Case 1")
+        st.write("This is the content for Videos Case 1.")
+        st.markdown("[Open in a new browser](https://www.example.com)", unsafe_allow_html=True)
  
     with col2:
-        # Open a new tab with HTML link
-        st.markdown("<a href='https://your-case2-link.com' target='_blank'>Open Case 2</a>", unsafe_allow_html=True)
+        st.subheader("Case 2")
+        st.write("You can add content here for Videos Case 2.")
+        st.markdown("[Open in a new browser](https://www.example.com)", unsafe_allow_html=True)
  
-with tabs3:
-    st.write("Content for Case 3")
+    with col3:
+        st.subheader("Case 3")
+        st.write("You can add content here for Videos Case 3.")
+        st.markdown("[Open in a new browser](https://www.example.com)", unsafe_allow_html=True)
  
-    # Display owl image under Case 3 (use the local file path)
-    st.image("owl.jpg", use_column_width=True)
-    st.subheader("Owl")
- 
-    # Create columns for content
-    col1, col2 = st.columns(2)
+elif selected_tab == "Audios":
+    st.subheader("Audios Cases")
  
     with col1:
-        st.subheader("Details for Case 3")
-        st.write("This is the content for Case 3.")
-        st.markdown("You can add more content here.")
+        st.subheader("Case 1")
+        st.write("This is the content for Audios Case 1.")
+        st.markdown("[Open in a new browser](https://www.example.com)", unsafe_allow_html=True)
  
     with col2:
-        # Open a new tab with HTML link
-        st.markdown("<a href='https://your-case3-link.com' target='_blank'>Open Case 3</a>", unsafe_allow_html=True)
+        st.subheader("Case 2")
+        st.write("You can add content here for Audios Case 2.")
+        st.markdown("[Open in a new browser](https://www.example.com)", unsafe_allow_html=True)
+ 
+    with col3:
+        st.subheader("Case 3")
+        st.write("You can add content here for Audios Case 3.")
+        st.markdown("[Open in a new browser](https://www.example.com)", unsafe_allow_html=True)
