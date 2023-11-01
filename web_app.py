@@ -2,19 +2,20 @@ import streamlit as st
 
 # Set page title and company logo
 st.set_page_config(
-    page_title="NexTurn AI Project",
-    page_icon=":rocket:",
-    layout="wide"
+  page_title="NexTurn AI Project",
+  page_icon=":rocket:",
+  layout="wide"
 )
 
 # Logo and title with an increased size
-st.image("Logo.png", width=400, use_column_width=False)  # Adjust the width value
+st.image("Logo.png", width=400, use_column_width=False) # Adjust the width value
 st.title("Welcome to NexTurn AI Project")
 
 # Create tabs for cases
-tabs1,tabs2,tabs3 = st.tabs(["Images", "Videos", "Audios"])
+tabs = st.tabs(["Images", "Videos", "Audios"])
 
-if tabs1 == "Images":
+# Images tab
+if tabs[0] == "Images":
     with st.tab_item("Images Cases"):
         # Create columns for content
         col1, col2, col3 = st.columns(3)
@@ -34,7 +35,8 @@ if tabs1 == "Images":
             st.write("You can add content here for Images Case 3.")
             st.markdown("[Open in a new browser](https://www.example.com)", unsafe_allow_html=True)
 
-if tabs2 == "Videos":
+# Videos tab
+if tabs[1] == "Videos":
     with st.tab_item("Videos Cases"):
         # Create columns for content
         col1, col2, col3 = st.columns(3)
@@ -54,7 +56,8 @@ if tabs2 == "Videos":
             st.write("You can add content here for Videos Case 3.")
             st.markdown("[Open in a new browser](https://www.example.com)", unsafe_allow_html=True)
 
-if tabs3 == "Audios":
+# Audios tab
+if tabs[2] == "Audios":
     with st.tab_item("Audios Cases"):
         # Create columns for content
         col1, col2, col3 = st.columns(3)
