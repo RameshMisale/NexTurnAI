@@ -61,10 +61,12 @@ cases = {
     }
 }
 
-# Display the selected tab's cases with links, subheaders, and content in side-by-side columns
+# Display the selected tab's cases with links, subheaders, and content side by side
 if selected_tab in cases:
     tab_content = cases[selected_tab]
+    
     col1, col2, col3 = st.columns(3)
+    
     for case, case_data in tab_content.items():
         with col1:
             st.subheader(case)
