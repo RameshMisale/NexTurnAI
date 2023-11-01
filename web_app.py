@@ -15,7 +15,7 @@ st.title("Welcome to NexTurn AI Project")
 tabs = ["Images", "Videos", "Audios"]
 selected_tab = st.radio("Select a case type:", tabs)
 
-# Define the content for each case in a dictionary
+# Define the content for each case in a dictionary with links
 cases = {
     "Images": {
         "Case 1": "This is the content for Images Case 1.",
@@ -34,10 +34,30 @@ cases = {
     }
 }
 
-# Display the selected tab's cases
+# Define links for each case in a dictionary
+case_links = {
+    "Images": {
+        "Case 1": "https://www.example.com/images_case1",
+        "Case 2": "https://www.example.com/images_case2",
+        "Case 3": "https://www.example.com/images_case3",
+    },
+    "Videos": {
+        "Case 1": "https://www.example.com/videos_case1",
+        "Case 2": "https://www.example.com/videos_case2",
+        "Case 3": "https://www.example.com/videos_case3",
+    },
+    "Audios": {
+        "Case 1": "https://www.example.com/audios_case1",
+        "Case 2": "https://www.example.com/audios_case2",
+        "Case 3": "https://www.example.com/audios_case3",
+    }
+}
+
+# Display the selected tab's cases with links
 if selected_tab in cases:
     tab_content = cases[selected_tab]
+    tab_links = case_links[selected_tab]
     for case, content in tab_content.items():
         st.subheader(case)
         st.write(content)
-        st.markdown("[Open in a new browser](https://www.example.com)", unsafe_allow_html=True)
+        st.markdown(f"[Open in a new browser]({tab_links[case]})", unsafe_allow_html=True)
