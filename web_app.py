@@ -12,9 +12,9 @@ st.image("Logo.png", width=400, use_column_width=False)  # Adjust the width valu
 st.title("Welcome to NexTurn AI Project")
 
 # Create tabs for cases
-tabs = st.tabs(["Images", "Videos", "Audios"])
+tabs1,tabs2,tabs3 = st.tabs(["Images", "Videos", "Audios"])
 
-if tabs == "Images":
+if tabs1 == "Images":
     with st.tab_item("Images Cases"):
         # Create columns for content
         col1, col2, col3 = st.columns(3)
@@ -34,7 +34,7 @@ if tabs == "Images":
             st.write("You can add content here for Images Case 3.")
             st.markdown("[Open in a new browser](https://www.example.com)", unsafe_allow_html=True)
 
-if tabs == "Videos":
+if tabs2 == "Videos":
     with st.tab_item("Videos Cases"):
         # Create columns for content
         col1, col2, col3 = st.columns(3)
@@ -54,7 +54,7 @@ if tabs == "Videos":
             st.write("You can add content here for Videos Case 3.")
             st.markdown("[Open in a new browser](https://www.example.com)", unsafe_allow_html=True)
 
-if tabs == "Audios":
+if tabs3 == "Audios":
     with st.tab_item("Audios Cases"):
         # Create columns for content
         col1, col2, col3 = st.columns(3)
