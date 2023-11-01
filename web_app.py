@@ -14,13 +14,9 @@ st.title("Welcome to NexTurn AI Project")
 # Create tabs for cases
 tabs = st.tabs(["Images", "Videos", "Audios"])
 
-# Iterate over the tabs
-for i in range(len(tabs)):
+# Create tab items for each tab
+for tab_name in tabs:
 
-    # Get the tab name
-    tab_name = tabs[i]
-
-    # Create a tab item
     with st.tab_item(tab_name + " Cases"):
 
         # Create columns for content
