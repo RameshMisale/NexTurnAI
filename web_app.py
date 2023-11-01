@@ -23,11 +23,11 @@ cases = {
             "link": "https://www.example.com/images/case1"
         },
         "Case 2": {
-            "content": "This is the content for Images Case 2.",
+            "content": "You can add content here for Images Case 2.",
             "link": "https://www.example.com/images/case2"
         },
         "Case 3": {
-            "content": "This is the content for Images Case 3.",
+            "content": "You can add content here for Images Case 3.",
             "link": "https://www.example.com/images/case3"
         }
     },
@@ -37,11 +37,11 @@ cases = {
             "link": "https://www.example.com/videos/case1"
         },
         "Case 2": {
-            "content": "This is the content for Videos Case 2.",
+            "content": "You can add content here for Videos Case 2.",
             "link": "https://www.example.com/videos/case2"
         },
         "Case 3": {
-            "content": "This is the content for Videos Case 3.",
+            "content": "You can add content here for Videos Case 3.",
             "link": "https://www.example.com/videos/case3"
         }
     },
@@ -51,31 +51,22 @@ cases = {
             "link": "https://www.example.com/audios/case1"
         },
         "Case 2": {
-            "content": "This is the content for Audios Case 2.",
+            "content": "You can add content here for Audios Case 2.",
             "link": "https://www.example.com/audios/case2"
         },
         "Case 3": {
-            "content": "This is the content for Audios Case 3.",
+            "content": "You can add content here for Audios Case 3.",
             "link": "https://www.example.com/audios/case3"
         }
     }
 }
 
-# Display the selected tab's cases with links, subheaders, and content side by side
+# Display the selected tab's cases with links, subheaders, and content in side-by-side columns
 if selected_tab in cases:
     tab_content = cases[selected_tab]
-
     col1, col2, col3 = st.columns(3)
-
-    for case in tab_content:
+    for case, case_data in tab_content.items():
         with col1:
             st.subheader(case)
-            st.write(tab_content[case]["content"])
-
-        with col2:
-            st.markdown(f"[Open {case}]({tab_content[case]['link']})", unsafe_allow_html=True)
-
-        if case != "Case 3":
-            st.markdown("------", unsafe_allow_html=True)  # Add a horizontal line to separate cases
-
-# This code will display "Case 1", "Case 2", and "Case 3" side by side with content and links in the specified format.
+            st.write(case_data["content"])
+            st.markdown(f"[Open {case}]({case_data['link']})", unsafe_allow_html=True)
