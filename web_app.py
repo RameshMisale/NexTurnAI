@@ -11,7 +11,8 @@ st.set_page_config(
 
 
 # Logo and title with an increased size
-st.image("Logo.png", width=400, use_column_width=False) # Adjust the width value
+st.image("Logo.png", width=400, use_column_width=False)  # Adjust the width value
+ 
 st.title("Welcome to NexTurn AI Project")
 
 # Create tabs for cases
