@@ -1,5 +1,3 @@
-#import streamlit as st
-
 import streamlit as st
 
 # Set page title and company logo
@@ -9,10 +7,8 @@ st.set_page_config(
     layout="wide"
 )
 
-
 # Logo and title with an increased size
-st.image("Logo.png",width=400,use_column_width=False)  # Adjust the width value
- 
+st.image("Logo.png", width=400, use_column_width=False)  # Adjust the width value
 st.title("Welcome to NexTurn AI Project")
 
 # Create tabs for cases
@@ -31,7 +27,7 @@ if tabs[0] == "Images":
 
         with col2:
             st.subheader("Case 2")
-            st.write("You can add content here for Images Case 2.")
+            st write("You can add content here for Images Case 2.")
             st.markdown("[Open in a new browser](https://www.example.com)", unsafe_allow_html=True)
 
         with col3:
