@@ -27,7 +27,7 @@ if tabs[0] == "Images":
 
         with col2:
             st.subheader("Case 2")
-            st write("You can add content here for Images Case 2.")
+            st.write("You can add content here for Images Case 2.")
             st.markdown("[Open in a new browser](https://www.example.com)", unsafe_allow_html=True)
 
         with col3:
