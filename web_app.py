@@ -61,12 +61,13 @@ cases = {
     }
 }
 
-# Display the selected tab's cases with links, subheaders, and content in side-by-side columns
+# Display the selected tab's cases with links, subheaders, and content in a container tab
 if selected_tab in cases:
     tab_content = cases[selected_tab]
-    col1, col2, col3 = st.columns(3)
-    for case, case_data in tab_content.items():
-        with col1:
-            st.subheader(case)
-            st.write(case_data["content"])
-            st.markdown(f"[Open {case}]({case_data['link']})", unsafe_allow_html=True)
+    selected_case = st.selectbox(f"Select a case ({selected_tab})", list(tab_content.keys()))
+    
+    case_data = tab_content[selected_case]
+    
+    st.subheader(selected_case)
+    st.write(case_data["content"])
+    st.markdown(f"[Open {selected_case}]({case_data['link']})", unsafe_allow_html=True)
