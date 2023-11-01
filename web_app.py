@@ -61,15 +61,14 @@ cases = {
     }
 }
 
-# Reverse the order of cases
-for tab in cases:
-    cases[tab] = dict(reversed(cases[tab].items()))
-
-# Display the selected tab's cases with links, subheaders, and content sequentially
+# Display the selected tab's cases with links, subheaders, and content side by side
 if selected_tab in cases:
     tab_content = cases[selected_tab]
     
+    col1, col2, col3 = st.columns(3)
+    
     for case in tab_content:
-        st.subheader(case)
-        st.write(tab_content[case]["content"])
-        st.markdown(f"[Open {case}]({tab_content[case]['link']})", unsafe_allow_html=True)
+        with col1:
+            st.subheader(case)
+            st.write(tab_content[case]["content"])
+            st.markdown(f"[Open {case}]({tab_content[case]['link']})", unsafe_allow_html=True)
