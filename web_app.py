@@ -1,27 +1,22 @@
 import streamlit as st
- 
+
 # Set page title and company logo
 st.set_page_config(
     page_title="NexTurn AI Project",
     page_icon=":rocket:",
     layout="wide"
 )
- 
-# Logo and title
-st.image("Logo.png", width=100, use_column_width=False)
+
+# Logo and title with an increased size
+st.image("Logo.png", width=400, use_column_width=False)  # Increase the width value to adjust the logo size
 st.title("Welcome to NexTurn AI Project")
- 
+
 # Create tabs for cases
 tabs1, tabs2, tabs3 = st.tabs(["Case 1", "Case 2", "Case 3"])
-#st.write(tabs)
+
 with tabs1:
     st.write("Content for Case 1")
  
-    # Display cat image under Case 1 (use the local file path)
-    #st.image("cat.jpg", use_column_width=True)
-    #st.subheader("Cat")
- 
-    # Create columns for content
     col1, col2 = st.columns(2)
  
     with col1:
@@ -30,17 +25,11 @@ with tabs1:
         st.markdown("You can add more content here.")
  
     with col2:
-        # Open a new tab with HTML link
         st.markdown("<a href='https://your-case1-link.com' target='_blank'>Open Case 1</a>", unsafe_allow_html=True)
- 
-with tabs2 :
+
+with tabs2:
     st.write("Content for Case 2")
  
-    # Display dog image under Case 2 (use the local file path)
-    #st.image("dog.jpg", use_column_width=True)
-    #st.subheader("Dog")
- 
-    # Create columns for content
     col1, col2 = st.columns(2)
  
     with col1:
@@ -49,17 +38,11 @@ with tabs2 :
         st.markdown("You can add more content here.")
  
     with col2:
-        # Open a new tab with HTML link
         st.markdown("<a href='https://your-case2-link.com' target='_blank'>Open Case 2</a>", unsafe_allow_html=True)
- 
+
 with tabs3:
     st.write("Content for Case 3")
  
-    # Display owl image under Case 3 (use the local file path)
-    #st.image("owl.jpg", use_column_width=True)
-    #st.subheader("Owl")
- 
-    # Create columns for content
     col1, col2 = st.columns(2)
  
     with col1:
@@ -68,5 +51,4 @@ with tabs3:
         st.markdown("You can add more content here.")
  
     with col2:
-        # Open a new tab with HTML link
         st.markdown("<a href='https://your-case3-link.com' target='_blank'>Open Case 3</a>", unsafe_allow_html=True)
