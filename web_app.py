@@ -61,6 +61,10 @@ cases = {
     }
 }
 
+# Reverse the order of cases
+for tab in cases:
+    cases[tab] = dict(reversed(cases[tab].items()))
+
 # Display the selected tab's cases with links, subheaders, and content sequentially
 if selected_tab in cases:
     tab_content = cases[selected_tab]
