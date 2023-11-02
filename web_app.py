@@ -1,5 +1,4 @@
 import streamlit as st
-import joblib
 
 # Set page title and company logo
 st.set_page_config(
@@ -20,26 +19,10 @@ with tabs1:
 
     with col1:
         st.subheader("Case 1")
-        st.write("Click the button to predict house price")
+        st.write("Click the button to open the House Price Prediction page")
         if st.button("Open House Price Prediction"):
-            st.write("Please enter the details below:")
-            try:
-                sqft = st.number_input("SqFt")
-                bedrooms = st.number_input("Bedrooms")
-                bathrooms = st.number_input("Bathrooms")
-                offers = st.number_input("Offers")
-                brick = st.checkbox("Brick")
-                neighborhood = st.selectbox("Neighborhood", ["Neighborhood A", "Neighborhood B", "Neighborhood C"])
-                if st.button("Get Price Prediction"):
-                    # Load your pre-trained regression model
-                    model = joblib.load('Regression_model.pkl')
-                    # Prepare input data for prediction
-                    input_data = [sqft, bedrooms, bathrooms, offers, int(brick), neighborhood]
-                    # Make the prediction
-                    predicted_price = model.predict([input_data])[0]
-                    st.write(f"Predicted Price: ${predicted_price:,.2f}")
-            except Exception as e:
-                st.write(f"An error occurred: {str(e)}")
+            # Open the House Price Prediction HTML page in a new tab
+            st.markdown("<a href='house_price_prediction.html' target='_blank'>Open House Price Prediction</a>", unsafe_allow_html=True)
 
     with col2:
         st.subheader("Case 2")
