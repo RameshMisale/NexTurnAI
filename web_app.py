@@ -27,7 +27,7 @@ with tabs1:
         user_input = st.text_input("Enter data for prediction:")
         if st.button("Get Prediction"):
             # Load your pre-trained ML model
-            model = joblib.load('your_model.pkl')
+            model = joblib.load('Regression_model.pkl')
             
             # Make predictions
             prediction = model.predict([user_input])
