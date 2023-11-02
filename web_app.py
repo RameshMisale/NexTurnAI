@@ -30,7 +30,7 @@ with tabs3:
     st.write("Add the content for Case 3.")
 
 # Check if the query parameter "page" is set to "house_price_prediction"
-if "page" in st.experimental_get_query_params() and st.experimental_get_query_params()["page"] == "house_price_prediction":
+if "page" in st.experimental_get_query_params() and st.experimental_get_query_params()["page"] == "house_price_prediction.py":
     st.title("House Price Prediction")
 
     # Create input fields for user input
