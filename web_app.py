@@ -27,8 +27,7 @@ with tabs1:
         st.subheader("Case 1")
         st.write("Click the button to open the House Price Prediction GUI")
         if st.button("Open House Price Prediction"):
-            # Set a session state to indicate the House Price Prediction page should be opened
-            st.session_state.house_price_prediction_opened = True
+            st.markdown("<iframe src='https://github.com/RameshMisale/NexTurnAI/blob/main/house_price_prediction.html' width='800' height='600'></iframe>", unsafe_allow_html=True)
 
     with col2:
         st.subheader("Case 2")
@@ -40,10 +39,9 @@ with tabs1:
         st.write("Add the content for Case 3.")
         st.markdown("[Open in a new browser](https://www.example.com)", unsafe_allow_html=True)
 
-# Check if the House Price Prediction page should be opened
-if st.session_state.get("house_price_prediction_opened"):
-    st.subheader("House Price Prediction")
-    st.write("Please enter the required information to predict the house price.")
+# Create a separate Streamlit page for House Price Prediction GUI
+if st.url == "https://github.com/RameshMisale/NexTurnAI/blob/main/house_price_prediction.html":
+    st.title("House Price Prediction")
 
     # Create input fields for user input
     sqft = st.number_input("SqFt", min_value=0)
@@ -63,5 +61,3 @@ if st.session_state.get("house_price_prediction_opened"):
         # Display the predicted price
         st.subheader("Predicted Price:")
         st.write(f"${predicted_price:,.2f}")
-
-# Rest of your code...
