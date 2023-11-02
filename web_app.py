@@ -100,4 +100,4 @@ with tabs2:
                 prediction = predict_price(price, sqft, bedrooms, bathrooms, offers, brick, neighborhood)
 
                 # Display the prediction to the user
-                #st.write("Predicted price: ${
+                st.write("Predicted price: ${:.2f}".format(prediction))
