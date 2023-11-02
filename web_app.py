@@ -82,8 +82,8 @@ with tabs2:
         # Open a new dialog box with the input fields
         dialog = st.dialog("Predict House Price")
 
-        # Add the input fields to the dialog box
-        with dialog:
-            price = st.number_input("Price")
-            sqft = st.number_input("SqFt")
-            bedrooms = st.number_input("Bedrooms
+        # # Add the input fields to the dialog box
+        # with dialog:
+        #     price = st.number_input("Price")
+        #     sqft = st.number_input("SqFt")
+        #     bedrooms = st.number_input("Bedrooms
