@@ -24,7 +24,7 @@ with tabs1:
         if st.button("Open House Price Prediction"):
             st.write("You are being redirected to the House Price Prediction page.")
             # Redirect to the House Price Prediction page using a link
-            st.markdown("[Open House Price Prediction](https://www.example.com/house_price_prediction)", unsafe_allow_html=True)
+            st.markdown("[Open House Price Prediction](house_price_prediction.html)", unsafe_allow_html=True)
 
     # Add content for Case 2 and Case 3 here
 
