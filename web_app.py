@@ -40,7 +40,7 @@ with tabs1:
         st.markdown("[Open in a new browser](https://www.example.com)", unsafe_allow_html=True)
 
 # Create a separate Streamlit page for House Price Prediction GUI
-if st.url == "https://your-app-url.com/house_price_prediction":
+if st.url == "https://house_price_prediction":
     st.title("House Price Prediction")
 
     # Create input fields for user input
