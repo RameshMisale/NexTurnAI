@@ -27,7 +27,7 @@ with tabs1:
         st.subheader("Case 1")
         st.write("Click the button to open the House Price Prediction GUI")
         if st.button("Open House Price Prediction"):
-            st.markdown("[Open House Price Prediction](https://your-app-url.com/house_price_prediction)", unsafe_allow_html=True)
+            st.markdown("<iframe src='https://github.com/RameshMisale/NexTurnAI/blob/main/house_price_prediction.html' width='800' height='600'></iframe>", unsafe_allow_html=True)
 
     with col2:
         st.subheader("Case 2")
