@@ -6,7 +6,7 @@ st.title("House Price Prediction")
 # Create input fields for user input
 price = st.number_input("Price")
 sqft = st.number_input("SqFt")
-bedrooms = st.number_input("Bedrooms")
+bedrooms = st.number_input("Bedrooms") 
 bathrooms = st.number_input("Bathrooms")
 offers = st.number_input("Offers")
 brick = st.checkbox("Brick")
