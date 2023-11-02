@@ -12,34 +12,26 @@ st.image("Logo.png", width=400, use_column_width=False)
 st.title("Welcome to NexTurn AI Project")
 
 # Create tabs for cases
-tabs1, tabs2, tabs3 = st.tabs(["Images", "Videos", "Audios"])
-with tabs1:
-    st.write("Content for image Cases")
-    col1, col2, col3 = st.columns(3)
+tabs1, tabs2, tabs3 = st.columns(3)
  
-    with col1:
-        st.subheader("Case 1")
-        st.write("Click the button to open the House Price Prediction GUI")
-        if st.button("Open House Price Prediction"):
-            # Redirect to the House Price Prediction page using query parameters
-            st.experimental_set_query_params(page="house_price_prediction")
+with tabs1:
+    st.subheader("Case 1")
+    st.write("Click the button to open the House Price Prediction GUI")
+    if st.button("Open House Price Prediction"):
+        # Redirect to the House Price Prediction page using the URL
+        st.markdown("[Open House Price Prediction](https://github.com/RameshMisale/NexTurnAI/blob/main/house_price_prediction.py)", unsafe_allow_html=True)
 
-    with col2:
-        st.subheader("Case 2")
-        st.write("Add the content for Case 2.")
-        st.markdown("[Open in a new browser](https://www.example.com)", unsafe_allow_html=True)
+with tabs2:
+    st.subheader("Case 2")
+    st.write("Add the content for Case 2.")
 
-    with col3:
-        st.subheader("Case 3")
-        st.write("Add the content for Case 3.")
-        st.markdown("[Open in a new browser](https://www.example.com)", unsafe_allow_html=True)
-
-# ...
-
+with tabs3:
+    st.subheader("Case 3")
+    st.write("Add the content for Case 3.")
 
 # Rest of your code
 # Create a separate Streamlit page for House Price Prediction GUI
-if st.url == "https://github.com/RameshMisale/NexTurnAI/blob/main/house_price_prediction.html":
+if "house_price_prediction.py" in st.url:
     st.title("House Price Prediction")
 
     # Create input fields for user input
