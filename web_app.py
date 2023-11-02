@@ -45,7 +45,7 @@ with tabs1:
     col1, col2, col3 = st.columns(3)
 
     # Add a "Predict Price" button to the Images tab
-    if st.button("Predict Price"):
+    if st.button("Predict Price - Images"):
 
         # Open a new dialog box with the input fields
         dialog = st.dialog("Predict House Price")
@@ -78,7 +78,7 @@ with tabs2:
     col1, col2, col3 = st.columns(3)
 
     # Add a "Predict Price" button to the Videos tab
-    if st.button("Predict Price"):
+    if st.button("Predict Price - Videos"):
 
         # Open a new dialog box with the input fields
         dialog = st.dialog("Predict House Price")
@@ -101,3 +101,8 @@ with tabs2:
 
                 # Display the prediction to the user
                 st.write("Predicted price: ${:.2f}".format(prediction))
+
+        # Close the dialog box
+        dialog.close()
+
+# Rest of your code...
