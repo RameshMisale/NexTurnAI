@@ -45,6 +45,7 @@ with tabs1:
 # Rest of your code...
 
 
+
 # Create a separate Streamlit page for House Price Prediction GUI
 if st.url == "https://github.com/RameshMisale/NexTurnAI/blob/main/house_price_prediction.html":
     st.title("House Price Prediction")
