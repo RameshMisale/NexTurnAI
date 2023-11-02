@@ -21,7 +21,8 @@ with tabs1:
         st.subheader("Case 1")
         st.write("Click the button to open the House Price Prediction")
         if st.button("Open House Price Prediction"):
-            st.markdown("[Open House Price Prediction](https://www.example.com/house_price_prediction)", unsafe_allow_html=True)
+            st.markdown("[Open House Price Prediction](https://github.com/RameshMisale/NexTurnAI/blob/main/house_price_prediction.py)", unsafe_allow_html=True)
+
 
     # Rest of your code...
 
