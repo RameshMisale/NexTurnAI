@@ -2,7 +2,7 @@ import streamlit as st
 import pickle
 
 # Load the machine learning model pickle file
-model = pickle.load(open("Regression_model.pickle", "rb"))
+model = pickle.load(open("Regression_model.pkl", "rb"))
 
 # Set page title and company logo
 st.set_page_config(
