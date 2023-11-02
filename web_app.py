@@ -21,8 +21,8 @@ with tabs1:
         st.subheader("Case 1")
         st.write("Click the button to open the House Price Prediction page")
         if st.button("Open House Price Prediction"):
-            # Open the publicly hosted HTML page in a new tab
-            st.markdown("<a href='https://example.com/house_price_prediction.html' target='_blank'>Open House Price Prediction</a>", unsafe_allow_html=True)
+            # Open the HTML page from your GitHub repository in a new tab
+            st.markdown("<a href='https://raw.githubusercontent.com/RameshMisale/NexTurnAI/main/house_price_prediction.html' target='_blank'>Open House Price Prediction</a>", unsafe_allow_html=True)
 
     with col2:
         st.subheader("Case 2")
