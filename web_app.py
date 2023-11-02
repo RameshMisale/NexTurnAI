@@ -39,70 +39,49 @@ def predict_price(price, sqft, bedrooms, bathrooms, offers, brick, neighborhood)
     # Return the prediction
     return prediction[0]
 
-# Images tab
+# Add input fields for both Images and Videos tabs
 with tabs1:
     st.write("Content for image Cases")
-    col1, col2, col3 = st.columns(3)
+    price1 = st.number_input("Price - Images")
+    sqft1 = st.number_input("SqFt - Images")
+    bedrooms1 = st.number_input("Bedrooms - Images")
+    bathrooms1 = st.number_input("Bathrooms - Images")
+    offers1 = st.number_input("Offers - Images")
+    brick1 = st.checkbox("Brick - Images")
+    neighborhood1 = st.text_input("Neighborhood - Images")
 
-    # Add a "Predict Price" button to the Images tab
-    if st.button("Predict Price - Images"):
-
-        # Open a new dialog box with the input fields
-        dialog = st.dialog("Predict House Price")
-
-        # Add the input fields to the dialog box
-        with dialog:
-            price = st.number_input("Price")
-            sqft = st.number_input("SqFt")
-            bedrooms = st.number_input("Bedrooms")
-            bathrooms = st.number_input("Bathrooms")
-            offers = st.number_input("Offers")
-            brick = st.checkbox("Brick")
-            neighborhood = st.text_input("Neighborhood")
-
-            # If the user clicks on the "Predict" button, predict the price of the house
-            if st.button("Predict"):
-
-                # Make the prediction
-                prediction = predict_price(price, sqft, bedrooms, bathrooms, offers, brick, neighborhood)
-
-                # Display the prediction to the user
-                st.write("Predicted price: ${:.2f}".format(prediction))
-
-        # Close the dialog box
-        dialog.close()
-
-# Videos tab
 with tabs2:
     st.write("Content for Video Cases")
-    col1, col2, col3 = st.columns(3)
+    price2 = st.number_input("Price - Videos")
+    sqft2 = st.number_input("SqFt - Videos")
+    bedrooms2 = st.number_input("Bedrooms - Videos")
+    bathrooms2 = st.number_input("Bathrooms - Videos")
+    offers2 = st.number_input("Offers - Videos")
+    brick2 = st.checkbox("Brick - Videos")
+    neighborhood2 = st.text_input("Neighborhood - Videos")
 
-    # Add a "Predict Price" button to the Videos tab
-    if st.button("Predict Price - Videos"):
+# Button to predict price
+if st.button("Predict Price"):
 
-        # Open a new dialog box with the input fields
-        dialog = st.dialog("Predict House Price")
+    if tabs1:
+        price = price1
+        sqft = sqft1
+        bedrooms = bedrooms1
+        bathrooms = bathrooms1
+        offers = offers1
+        brick = brick1
+        neighborhood = neighborhood1
+    elif tabs2:
+        price = price2
+        sqft = sqft2
+        bedrooms = bedrooms2
+        bathrooms = bathrooms2
+        offers = offers2
+        brick = brick2
+        neighborhood = neighborhood2
 
-        # Add the input fields to the dialog box
-        with dialog:
-            price = st.number_input("Price")
-            sqft = st.number_input("SqFt")
-            bedrooms = st.number_input("Bedrooms")
-            bathrooms = st.number_input("Bathrooms")
-            offers = st.number_input("Offers")
-            brick = st.checkbox("Brick")
-            neighborhood = st.text_input("Neighborhood")
+    # Make the prediction
+    prediction = predict_price(price, sqft, bedrooms, bathrooms, offers, brick, neighborhood)
 
-            # If the user clicks on the "Predict" button, predict the price of the house
-            if st.button("Predict"):
-
-                # Make the prediction
-                prediction = predict_price(price, sqft, bedrooms, bathrooms, offers, brick, neighborhood)
-
-                # Display the prediction to the user
-                st.write("Predicted price: ${:.2f}".format(prediction))
-
-        # Close the dialog box
-        dialog.close()
-
-# Rest of your code...
+    # Display the prediction to the user
+    st.write("Predicted price: ${:.2f}".format(prediction))
