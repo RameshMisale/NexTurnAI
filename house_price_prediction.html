@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>House Price Prediction</title>
+</head>
+<body>
+    <h1>House Price Prediction</h1>
+    <form action="/predict" method="post">
+        <label for="sqft">SqFt:</label>
+        <input type="number" name="sqft" required><br><br>
+        <label for="bedrooms">Bedrooms:</label>
+        <input type="number" name="bedrooms" required><br><br>
+        <label for="bathrooms">Bathrooms:</label>
+        <input type="number" name="bathrooms" required><br><br>
+        <label for="offers">Offers:</label>
+        <input type="number" name="offers" required><br><br>
+        <label for="brick">Brick:</label>
+        <input type="checkbox" name="brick"><br><br>
+        <label for="neighborhood">Neighborhood:</label>
+        <select name="neighborhood">
+            <option value="Neighborhood A">Neighborhood A</option>
+            <option value="Neighborhood B">Neighborhood B</option>
+            <option value="Neighborhood C">Neighborhood C</option>
+        </select><br><br>
+        <input type="submit" value="Predict Price">
+    </form>
+</body>
+</html>
