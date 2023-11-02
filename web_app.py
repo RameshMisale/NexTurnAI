@@ -3,60 +3,34 @@ import joblib
 
 # Set page title and company logo
 st.set_page_config(
-    page_title="NexTurn AI Project",
-    page_icon=":rocket:",
+    page_title="House Price Prediction",
+    page_icon="🏡",
     layout="wide"
 )
 
 # Logo and title with an increased size
 st.image("Logo.png", width=400, use_column_width=False)
-st.title("Welcome to NexTurn AI Project")
+st.title("Welcome to House Price Prediction")
 
-# Create tabs for cases
-tabs1, tabs2, tabs3 = st.tabs(["Images", "Videos", "Audios"])
-with tabs1:
-    st.write("Content for image Cases")
-    col1, col2, col3 = st.columns(3) 
+# Create input fields for features
+sqft = st.number_input("Square Footage", min_value=100, max_value=10000)
+bedrooms = st.number_input("Number of Bedrooms", min_value=1, max_value=10)
+bathrooms = st.number_input("Number of Bathrooms", min_value=1, max_value=10)
+offers = st.number_input("Number of Offers", min_value=0, max_value=10)
+brick = st.checkbox("Brick Exterior")
+neighborhood = st.selectbox("Neighborhood", ["Neighborhood A", "Neighborhood B", "Neighborhood C"])
 
-    with col1:
-        st.subheader("Case 1")
-        st.write("Add the content for Case 1.")
-        
-        # ML Model Integration
-        st.subheader("ML Model Prediction")
-        user_input = st.text_input("Enter data for prediction:")
-        if st.button("Get Prediction"):
-            # Load your pre-trained ML model
-            model = joblib.load('Regression_model.pkl')
-            
-            # Make predictions
-            prediction = model.predict([user_input])
-            st.write(f"Prediction: {prediction}")
+# Load your pre-trained regression model
+model = joblib.load('Regression_model.pkl')
 
-        st.markdown("[Open in a new browser](https://www.example.com)", unsafe_allow_html=True)
-
-    with col2:
-        st.subheader("Case 2")
-        st.write("Add the content for Case 2.")
-        st.markdown("[Open in a new browser](https://www.example.com)", unsafe_allow_html=True)
-
-    with col3:
-        st.subheader("Case 3")
-        st.write("Add the content for Case 3.")
-        st.markdown("[Open in a new browser](https://www.example.com)", unsafe_allow_html=True)
-
-with tabs2:
-    # Similar structure as tabs1 for Videos
-    st.write("Content for Video Cases")
-    # ...
-    # (Repeat the structure for other tabs)
- 
-with tabs3:
-    # Similar structure as tabs1 for Audios
-    st.write("Content for Audio Cases")
-    # ...
-    # (Repeat the structure for other tabs)
+# Button to trigger the prediction
+if st.button("Get Price Prediction"):
+    # Prepare input data for prediction
+    input_data = [sqft, bedrooms, bathrooms, offers, int(brick), neighborhood]
+    # Make the prediction
+    predicted_price = model.predict([input_data])[0]
+    st.write(f"Predicted Price: ${predicted_price:,.2f}")
 
 # Footer
 st.markdown("---")
-st.write("Thank you for visiting...!!")
+st.write("Thank you for using our House Price Prediction tool!")
