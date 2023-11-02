@@ -11,23 +11,26 @@ st.set_page_config(
     layout="wide"
 )
 
-st.title("House Price Prediction")
+# Check if the query parameter "page" is set to "house_price_prediction"
+if "page" in st.experimental_get_query_params():
+    if st.experimental_get_query_params()["page"] == ["house_price_prediction"]:
+        st.title("House Price Prediction")
 
-# Create input fields for user input
-sqft = st.number_input("SqFt", min_value=0)
-bedrooms = st.number_input("Bedrooms", min_value=0)
-bathrooms = st.number_input("Bathrooms", min_value=0)
-offers = st.number_input("Offers", min_value=0)
-brick = st.checkbox("Brick")
-neighborhood = st.selectbox("Neighborhood", ["Neighborhood A", "Neighborhood B", "Neighborhood C"])
+        # Create input fields for user input
+        sqft = st.number_input("SqFt", min_value=0)
+        bedrooms = st.number_input("Bedrooms", min_value=0)
+        bathrooms = st.number_input("Bathrooms", min_value=0)
+        offers = st.number_input("Offers", min_value=0)
+        brick = st.checkbox("Brick")
+        neighborhood = st.selectbox("Neighborhood", ["Neighborhood A", "Neighborhood B", "Neighborhood C"])
 
-if st.button("Predict Price"):
-    # Prepare the input data for prediction
-    input_data = [sqft, bedrooms, bathrooms, offers, int(brick), neighborhood]
+        if st.button("Predict Price"):
+            # Prepare the input data for prediction
+            input_data = [sqft, bedrooms, bathrooms, offers, int(brick), neighborhood]
 
-    # Make the prediction using the model
-    predicted_price = model.predict([input_data])[0]
+            # Make the prediction using the model
+            predicted_price = model.predict([input_data])[0]
 
-    # Display the predicted price
-    st.subheader("Predicted Price:")
-    st.write(f"${predicted_price:,.2f}")
+            # Display the predicted price
+            st.subheader("Predicted Price:")
+            st.write(f"${predicted_price:,.2f}")
