@@ -2,7 +2,8 @@ import streamlit as st
 import pickle
 
 # Load the machine learning model pickle file
-model = pickle.load(open("Regression_model.pkl", "rb"))
+model_path = "Regression_model.pkl"
+model = pickle.load(open(model_path, "rb"))
 
 # Set page title and company logo
 st.set_page_config(
@@ -82,8 +83,21 @@ with tabs2:
         # Open a new dialog box with the input fields
         dialog = st.dialog("Predict House Price")
 
-        # # Add the input fields to the dialog box
-        # with dialog:
-        #     price = st.number_input("Price")
-        #     sqft = st.number_input("SqFt")
-        #     bedrooms = st.number_input("Bedrooms
+        # Add the input fields to the dialog box
+        with dialog:
+            price = st.number_input("Price")
+            sqft = st.number_input("SqFt")
+            bedrooms = st.number_input("Bedrooms")
+            bathrooms = st.number_input("Bathrooms")
+            offers = st.number_input("Offers")
+            brick = st.checkbox("Brick")
+            neighborhood = st.text_input("Neighborhood")
+
+            # If the user clicks on the "Predict" button, predict the price of the house
+            if st.button("Predict"):
+
+                # Make the prediction
+                prediction = predict_price(price, sqft, bedrooms, bathrooms, offers, brick, neighborhood)
+
+                # Display the prediction to the user
+                #st.write("Predicted price: ${
