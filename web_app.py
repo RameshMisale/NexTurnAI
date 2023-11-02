@@ -22,7 +22,7 @@ tabs1, tabs2, tabs3 = st.tabs(["Images", "Videos", "Audios"])
 with tabs1:
     st.write("Content for image Cases")
     col1, col2, col3 = st.columns(3)
-
+ 
     with col1:
         st.subheader("Case 1")
         st.write("Click the button to open the House Price Prediction GUI")
