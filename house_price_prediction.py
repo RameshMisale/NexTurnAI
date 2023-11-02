@@ -1,5 +1,5 @@
 import streamlit as st
-import joblib
+import pickle
 
 st.title("House Price Prediction")
 
@@ -13,10 +13,13 @@ brick = st.checkbox("Brick")
 neighborhood = st.selectbox("Neighborhood", ["Neighborhood A", "Neighborhood B", "Neighborhood C"])
 
 if st.button("Predict Price"):
-    # Load your pre-trained regression model
-    model = joblib.load('Regression_model.pkl')
+    # Load your pre-trained regression model using pickle
+    with open('Regression_model.pkl', 'rb') as model_file:
+        model = pickle.load(model_file)
+    
     # Prepare input data for prediction
     input_data = [price, sqft, bedrooms, bathrooms, offers, int(brick), neighborhood]
+    
     # Make the prediction
     predicted_price = model.predict([input_data])[0]
     st.write(f"Predicted Price: ${predicted_price:,.2f}")
