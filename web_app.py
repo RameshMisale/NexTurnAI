@@ -21,9 +21,7 @@ with tabs1:
         st.subheader("Case 1")
         st.write("Click the button to open the House Price Prediction GUI")
         if st.button("Open House Price Prediction"):
-            st.markdown("Loading...")
-
-            # Redirect to the House Price Prediction page
+            # Redirect to the House Price Prediction page using query parameters
             st.experimental_set_query_params(page="house_price_prediction")
 
     with col2:
@@ -37,6 +35,7 @@ with tabs1:
         st.markdown("[Open in a new browser](https://www.example.com)", unsafe_allow_html=True)
 
 # ...
+
 
 # Rest of your code
 # Create a separate Streamlit page for House Price Prediction GUI
