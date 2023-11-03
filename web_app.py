@@ -26,9 +26,9 @@ with tabs1:
 
     with col2:
         st.subheader("Case 2")
-        st.write("Classification.")
+        st.write("Canser Prediction(Classification)")
         #st.markdown("[Open in a new browser](https://www.example.com)", unsafe_allow_html=True)
-        st.markdown("[Open House Price Prediction](https://classificationmodel-ambas3ka2x2zodupzgkb98.streamlit.app/)", unsafe_allow_html=True)
+        st.markdown("[Open Canser Prediction](https://classificationmodel-ambas3ka2x2zodupzgkb98.streamlit.app/)", unsafe_allow_html=True)
 
     with col3:
         st.subheader("Case 3")
