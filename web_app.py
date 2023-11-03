@@ -1,79 +1,74 @@
 import streamlit as st
-import pickle
-import pandas as pd
-
+ 
+# Set page title and company logo
 st.set_page_config(
     page_title="NexTurn AI Project",
     page_icon=":rocket:",
     layout="wide"
 )
-
+ 
+# Logo and title with an increased size
 st.image("Logo.png", width=400, use_column_width=False)
 st.title("Welcome to NexTurn AI Project")
-
-# Create tabs for different sections
-tabs = st.tabs(["General Case 1", "General Case 2"])
-
-# General Case 1: House Price Prediction Section
-with tabs[0]:
-    st.write("General Case 1: House Price Prediction (Regression)")
-    st.sidebar.title('Input Features')
-    age = st.sidebar.number_input("Age")
-    sqft = st.sidebar.number_input("SqFt")
-    bedrooms = st.sidebar.number_input("Bedrooms")
-    bathrooms = st.sidebar.number_input("Bathrooms")
-    offers = st.sidebar.number_input("Offers")
-    brick = st.sidebar.checkbox("Brick")
-
-    with open('Regression_model.pkl', 'rb') as model_file:
-        model = pickle.load(model_file)
-
-    input_data = pd.DataFrame({
-        'Age': [age],
-        'SqFt': [sqft],
-        'Bedrooms': [bedrooms],
-        'Bathrooms': [bathrooms],
-        'Offers': [offers],
-        'Brick': [int(brick)]
-    })
-
-    if st.sidebar.button("Predict House Price"):
-        predicted_price = model.predict(input_data)[0]
-        st.write(f"Predicted House Price: ${predicted_price:,.2f}")
-
-# General Case 2: Cancer Prediction Section
-with tabs[1]:
-    st.write("General Case 2: Cancer Prediction (Classification)")
-    st.sidebar.title('Input Features')
-    age = st.sidebar.number_input("Age")
-    bmi = st.sidebar.number_input("BMI")
-    glucose = st.sidebar.number_input("Glucose")
-    insulin = st.sidebar.number_input("Insulin")
-    homa = st.sidebar.number_input("HOMA")
-    leptin = st.sidebar.number_input("Leptin")
-    adiponectin = st.sidebar.number_input("Adiponectin")
-    resistin = st.sidebar.number_input("Resistin")
-    mcp1 = st.sidebar.number_input("MCP.1")
-
-    with open('Classification_model.pkl', 'rb') as model_file:
-        model = pickle.load(model_file)
-
-    input_data = pd.DataFrame({
-        'Age': [age],
-        'BMI': [bmi],
-        'Glucose': [glucose],
-        'Insulin': [insulin],
-        'HOMA': [homa],
-        'Leptin': [leptin],
-        'Adiponectin': [adiponectin],
-        'Resistin': [resistin],
-        'MCP.1': [mcp1]
-    })
-
-    if st.sidebar.button("Predict Cancer"):
-        predicted_class = model.predict(input_data)[0]
-        st.write(f"Predicted Cancer Class: {predicted_class}")
-
+ 
+# Create tabs for cases
+tabs1, tabs2, tabs3 = st.tabs(["General", "Text", "Images"])
+with tabs1:
+    st.write("General Cases")
+    col1, col2, col3 = st.columns(3)
+ 
+    with col1:
+        st.subheader("Case 1")
+        st.write("House Price Prediction(Regression)")
+        #if st.button("Open House Price Prediction"):
+        st.markdown("[Open House Price Prediction](https://appgui-jk6qksscd9ckag6lmcemz9.streamlit.app/)", unsafe_allow_html=True)
+ 
+ 
+    with col2:
+        st.subheader("Case 2")
+        st.write("Canser Prediction(Classification)")
+        #st.markdown("[Open in a new browser](https://www.example.com)", unsafe_allow_html=True)
+        st.markdown("[Open Canser Prediction](https://classificationmodel-ambas3ka2x2zodupzgkb98.streamlit.app/)", unsafe_allow_html=True)
+ 
+    with col3:
+        st.subheader("Case 3")
+        st.write("Add the content for Case 3.")
+        st.markdown("[Open in a new browser](https://www.example.com)", unsafe_allow_html=True)
+ 
+with tabs2:
+    st.write("Content is under construction...")
+    st.write("!!!...COMING SOON..!!!")
+    # col1, col2, col3 = st.columns(3)
+    # with col1:
+    #     st.subheader("Case 1")
+    #     st.write("Add content for Case 1.")
+    #     st.markdown("[Open in a new browser](https://www.example.com)", unsafe_allow_html=True)
+    # with col2:
+    #     st.subheader("Case 2")
+    #     st.write("Add content for Case 2.")
+    #     st.markdown("[Open in a new browser](https://www.example.com)", unsafe_allow_html=True)
+    # with col3:
+    #     st.subheader("Case 3")
+    #     st.write("Add content for Case 3.")
+    #     st.markdown("[Open in a new browser](https://www.example.com)", unsafe_allow_html=True)
+ 
+with tabs3:
+    st.write("Content is under construction...")
+    st.write("!!!...COMING SOON..!!!")
+    # col1, col2, col3 = st.columns(3)
+    # with col1:
+    #     st.subheader("Case 1")
+    #     st.write("Add content for Case 1.")
+    #     st.markdown("[Open in a new browser](https://www.example.com)", unsafe_allow_html=True)
+    # with col2:
+    #     st.subheader("Case 2")
+    #     st.write("Add content for Case 2.")
+    #     st.markdown("[Open in a new browser](https://www.example.com)", unsafe_allow_html=True)
+    # with col3:
+    #     st.subheader("Case 3")
+    #     st.write("Add content for Case 3.")
+    #     st.markdown("[Open in a new browser](https://www.example.com)", unsafe_allow_html=True)
+ 
 # Footer
 st.markdown("---")
 st.write("Thank you for visiting...!!")
