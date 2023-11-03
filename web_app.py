@@ -14,7 +14,7 @@ st.title("Welcome to NexTurn AI Project")
 # Create tabs for cases
 tabs1, tabs2, tabs3 = st.tabs(["General", "Text", "Images"])
 with tabs1:
-    st.write("Content for image Cases")
+    st.write("General Cases")
     col1, col2, col3 = st.columns(3)
 
     with col1:
