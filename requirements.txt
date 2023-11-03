@@ -1,3 +1,4 @@
+scikit-learn
 pillow
 numpy
 pandas
@@ -7,5 +8,4 @@ plotly
 matplotlib
 joblib
 streamlit
-scikit-learn
 requests
