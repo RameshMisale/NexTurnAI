@@ -11,11 +11,11 @@ st.set_page_config(
 st.image("Logo.png", width=400, use_column_width=False)
 st.title("Welcome to NexTurn AI Project")
 
-# Create tabs for cases
-tabs1, tabs2, tabs3 = st.tabs(["General", "Text", "Images"])
+# Create tabs for different prediction tasks
+tabs = st.tabs(["House Price Prediction", "Cancer Prediction"])
 
 # House Price Prediction Section
-with tabs1:
+with tabs[0]:
     st.write("House Price Prediction (Regression)")
     
     # Create input fields for user input
@@ -47,7 +47,7 @@ with tabs1:
         st.write(f"Predicted House Price: ${predicted_price:,.2f}")
 
 # Cancer Prediction Section
-with tabs2:
+with tabs[1]:
     st.write("Cancer Prediction (Classification)")
     
     # Create input fields for user input
