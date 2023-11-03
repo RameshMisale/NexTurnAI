@@ -11,14 +11,12 @@ st.set_page_config(
 st.image("Logo.png", width=400, use_column_width=False)
 st.title("Welcome to NexTurn AI Project")
 
-# Create tabs for different prediction tasks
-tabs = st.tabs(["House Price Prediction", "Cancer Prediction"])
+# Create tabs for different sections
+tabs = st.tabs(["General Case 1", "General Case 2"])
 
-# House Price Prediction Section
+# General Case 1: House Price Prediction Section
 with tabs[0]:
-    st.write("House Price Prediction (Regression)")
-    
-    # Create input fields for user input
+    st.write("General Case 1: House Price Prediction (Regression)")
     st.sidebar.title('Input Features')
     age = st.sidebar.number_input("Age")
     sqft = st.sidebar.number_input("SqFt")
@@ -27,11 +25,9 @@ with tabs[0]:
     offers = st.sidebar.number_input("Offers")
     brick = st.sidebar.checkbox("Brick")
 
-    # Load the pre-trained regression model using pickle
     with open('Regression_model.pkl', 'rb') as model_file:
         model = pickle.load(model_file)
 
-    # Create a DataFrame with the input data
     input_data = pd.DataFrame({
         'Age': [age],
         'SqFt': [sqft],
@@ -42,15 +38,12 @@ with tabs[0]:
     })
 
     if st.sidebar.button("Predict House Price"):
-        # Make the prediction
         predicted_price = model.predict(input_data)[0]
         st.write(f"Predicted House Price: ${predicted_price:,.2f}")
 
-# Cancer Prediction Section
+# General Case 2: Cancer Prediction Section
 with tabs[1]:
-    st.write("Cancer Prediction (Classification)")
-    
-    # Create input fields for user input
+    st.write("General Case 2: Cancer Prediction (Classification)")
     st.sidebar.title('Input Features')
     age = st.sidebar.number_input("Age")
     bmi = st.sidebar.number_input("BMI")
@@ -62,11 +55,9 @@ with tabs[1]:
     resistin = st.sidebar.number_input("Resistin")
     mcp1 = st.sidebar.number_input("MCP.1")
 
-    # Load the pre-trained classification model using pickle
     with open('Classification_model.pkl', 'rb') as model_file:
         model = pickle.load(model_file)
 
-    # Create a DataFrame with the input data
     input_data = pd.DataFrame({
         'Age': [age],
         'BMI': [bmi],
@@ -80,7 +71,6 @@ with tabs[1]:
     })
 
     if st.sidebar.button("Predict Cancer"):
-        # Make the prediction
         predicted_class = model.predict(input_data)[0]
         st.write(f"Predicted Cancer Class: {predicted_class}")
 
